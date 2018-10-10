@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>nth.reflect.framework.example</groupId>
+	<artifactId>examples</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>modules</name>
+	<modules>
+		<module>reflect-account-vault-domain</module>
+		<module>reflect-all-feature-domain</module>
+		<module>reflect-contact-domain-</module>
+		<module>reflect-class-diagram-domain-</module>
+		<module>reflect-web-shop-domain</module>
+		<module>reflect-account-vault-for-javafx</module>
+		<module>reflect-all-feature-for-javafx</module>
+		<module>reflect-web-shop-for-javafx</module>
+		<module>reflect-all-feature-for-commandline</module>
+		<module>reflect-web-shop-for-swing</module>
+		<module>reflect-all-feature-for-swing</module>
+	</modules>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- Set a compiler level -->
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.3</version>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.12</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
