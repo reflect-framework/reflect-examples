@@ -8,16 +8,16 @@
 	<name>modules</name>
 	<modules>
 		<module>reflect-account-vault-domain</module>
-		<module>reflect-all-feature-domain</module>
-		<module>reflect-contact-domain-</module>
-		<module>reflect-class-diagram-domain-</module>
-		<module>reflect-web-shop-domain</module>
 		<module>reflect-account-vault-for-javafx</module>
-		<module>reflect-all-feature-for-javafx</module>
-		<module>reflect-web-shop-for-javafx</module>
+		<module>reflect-all-feature-domain</module>
 		<module>reflect-all-feature-for-commandline</module>
-		<module>reflect-web-shop-for-swing</module>
+		<module>reflect-all-feature-for-javafx</module>
 		<module>reflect-all-feature-for-swing</module>
+		<module>reflect-class-diagram-domain-</module>
+		<module>reflect-contact-domain-</module>
+		<module>reflect-web-shop-domain</module>
+		<module>reflect-web-shop-for-javafx</module>
+		<module>reflect-web-shop-for-swing</module>
 	</modules>
 
 	<build>
