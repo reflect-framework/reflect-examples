@@ -13,8 +13,8 @@
 		<module>reflect-all-feature-for-commandline</module>
 		<module>reflect-all-feature-for-javafx</module>
 		<module>reflect-all-feature-for-swing</module>
-		<module>reflect-class-diagram-domain-</module>
-		<module>reflect-contact-domain-</module>
+		<module>reflect-class-diagram-domain</module>
+		<module>reflect-contact-domain</module>
 		<module>reflect-web-shop-domain</module>
 		<module>reflect-web-shop-for-javafx</module>
 		<module>reflect-web-shop-for-swing</module>
