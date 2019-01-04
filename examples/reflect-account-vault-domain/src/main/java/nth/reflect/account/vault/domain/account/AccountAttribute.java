@@ -1,4 +1,4 @@
-package nth.reflect.example.domain.account;
+package nth.reflect.account.vault.domain.account;
 
 import nth.reflect.fw.generic.util.TitleBuilder;
 

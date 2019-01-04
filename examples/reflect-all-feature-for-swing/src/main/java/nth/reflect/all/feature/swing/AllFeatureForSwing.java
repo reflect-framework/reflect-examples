@@ -1,9 +1,11 @@
 package nth.reflect.all.feature.swing;
 
-import java.util.Arrays;
 import java.util.List;
 
-import nth.reflect.example.domain.all.feature.AllFeatureSeviceObject;
+import nth.reflect.all.feature.AllFeatureColors;
+import nth.reflect.all.feature.AllFeatureInfrastructureClasses;
+import nth.reflect.all.feature.AllFeatureServiceClasses;
+import nth.reflect.fw.ui.style.ReflectColors;
 import nth.reflect.fw.ui.swing.ReflecttApplicationForSwing;
 
 public class AllFeatureForSwing extends ReflecttApplicationForSwing {
@@ -14,12 +16,17 @@ public class AllFeatureForSwing extends ReflecttApplicationForSwing {
 
 	@Override
 	public List<Class<?>> getServiceClasses() {
-		return Arrays.asList(AllFeatureSeviceObject.class);
+		return new AllFeatureServiceClasses();
 	}
 
 	@Override
 	public List<Class<?>> getInfrastructureClasses() {
-		return Arrays.asList();
+		return new AllFeatureInfrastructureClasses();
+	}
+
+	@Override
+	public ReflectColors getColors() {
+		return new AllFeatureColors();
 	}
 
 }

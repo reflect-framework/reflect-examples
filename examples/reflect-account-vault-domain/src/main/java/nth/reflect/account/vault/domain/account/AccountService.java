@@ -1,10 +1,10 @@
-package nth.reflect.example.domain.account;
+package nth.reflect.account.vault.domain.account;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import nth.reflect.example.domain.tag.Tag;
+import nth.reflect.account.vault.domain.tag.Tag;
 import nth.reflect.fw.layer5provider.notification.NotificationProvider;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionMode;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionModeType;

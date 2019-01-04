@@ -1,4 +1,4 @@
-package nth.reflect.example.domain.account;
+package nth.reflect.account.vault.domain.account;
 
 import java.awt.Toolkit;
 import java.awt.datatransfer.Clipboard;
@@ -8,7 +8,7 @@ import java.util.List;
 
 import javax.validation.constraints.NotNull;
 
-import nth.reflect.example.domain.tag.Tag;
+import nth.reflect.account.vault.domain.tag.Tag;
 import nth.reflect.fw.generic.util.TitleBuilder;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionMode;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionModeType;

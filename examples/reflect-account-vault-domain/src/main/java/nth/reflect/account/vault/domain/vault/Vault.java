@@ -1,4 +1,4 @@
-package nth.reflect.example.domain.vault;
+package nth.reflect.account.vault.domain.vault;
 
 public class Vault {
 	public String vaultName;

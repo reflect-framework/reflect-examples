@@ -1,7 +1,10 @@
-package nth.reflect.example.domain.all.feature;
+package nth.reflect.all.feature.domain;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -12,15 +15,19 @@ import nth.reflect.fw.layer3domain.DomainObjectProperty;
 import nth.reflect.fw.layer5provider.reflection.behavior.fieldmode.TextFieldMode;
 import nth.reflect.fw.layer5provider.reflection.behavior.fieldmode.TextFieldModeType;
 import nth.reflect.fw.layer5provider.reflection.behavior.format.Format;
+import nth.reflect.fw.layer5provider.reflection.behavior.order.Order;
 
 /**
- * {@link DomainObject} class to test all the supported {@link DomainObjectProperty} types.
+ * {@link DomainObject} class to test all the supported
+ * {@link DomainObjectProperty} types.
+ * 
  * @author nilsth
  *
  */
-public class AllFeatureDomainObject {
+public class Test {
 	private boolean myBoolean;
-//	private AllFeatureDomainObject myTest;//TODO this will cause an infinate loop in the ReflectionProvider
+	// private Test myTest;//TODO this will cause an infinate
+	// loop in the ReflectionProvider
 	private byte myByte;
 	private short myShort;
 	private int myInt;
@@ -39,14 +46,17 @@ public class AllFeatureDomainObject {
 	private Date myTime;
 	private Date myDateTime;
 	private Calendar myCalendar;
-	
+	private LocalDate myLocalDate;
+	private LocalTime myLocalTime;
+	private LocalDateTime myLocalDateTime;
 
-
-	private enum PickOrder {
+	enum PickOrder {
 		first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth, eleventh, twelfth
 	}
+
 	private PickOrder myEnum;
 
+	@Order(sequenceNumber = 1)
 	public boolean isMyBoolean() {
 		return myBoolean;
 	}
@@ -146,7 +156,7 @@ public class AllFeatureDomainObject {
 		this.myDate = myDate;
 	}
 
-	@Format(pattern="HH:mm:ss")
+	@Format(pattern = "HH:mm:ss")
 	public Date getMyTime() {
 		return myTime;
 	}
@@ -155,7 +165,7 @@ public class AllFeatureDomainObject {
 		this.myTime = myTime;
 	}
 
-	@Format(pattern="dd-mm-yyyy HH:mm:ss")
+	@Format(pattern = "dd-mm-yyyy HH:mm:ss")
 	public Date getMyDateTime() {
 		return myDateTime;
 	}
@@ -172,14 +182,13 @@ public class AllFeatureDomainObject {
 		this.myEnum = myEnum;
 	}
 
-//	public AllFeatureDomainObject getMyTest() {
-//		return myTest;
-//	}
-//
-//	public void setMyTest(AllFeatureDomainObject myTest) {
-//		this.myTest = myTest;
-//	}
-
+	// public Test getMyTest() {
+	// return myTest;
+	// }
+	//
+	// public void setMyTest(Test myTest) {
+	// this.myTest = myTest;
+	// }
 
 	public Calendar getMyCalendar() {
 		return myCalendar;
@@ -220,4 +229,29 @@ public class AllFeatureDomainObject {
 	public void setMyBigInteger(BigInteger myBigInteger) {
 		this.myBigInteger = myBigInteger;
 	}
+
+	public LocalDate getMyLocalDate() {
+		return myLocalDate;
+	}
+
+	public void setMyLocalDate(LocalDate myLocalDate) {
+		this.myLocalDate = myLocalDate;
+	}
+
+	public LocalTime getMyLocalTime() {
+		return myLocalTime;
+	}
+
+	public void setMyLocalTime(LocalTime myLocalTime) {
+		this.myLocalTime = myLocalTime;
+	}
+
+	public LocalDateTime getMyLocalDateTime() {
+		return myLocalDateTime;
+	}
+
+	public void setMyLocalDateTime(LocalDateTime myLocalDateTime) {
+		this.myLocalDateTime = myLocalDateTime;
+	}
+
 }

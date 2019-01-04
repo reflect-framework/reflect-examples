@@ -1,4 +1,4 @@
-package nth.reflect.example.domain.tag;
+package nth.reflect.account.vault.domain.tag;
 
 public class Tag {
 	private String name;

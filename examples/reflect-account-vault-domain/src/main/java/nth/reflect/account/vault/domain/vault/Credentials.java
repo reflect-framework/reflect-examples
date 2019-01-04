@@ -1,4 +1,4 @@
-package nth.reflect.example.domain.vault;
+package nth.reflect.account.vault.domain.vault;
 
 import nth.reflect.fw.layer5provider.reflection.behavior.fieldmode.TextFieldMode;
 import nth.reflect.fw.layer5provider.reflection.behavior.fieldmode.TextFieldModeType;

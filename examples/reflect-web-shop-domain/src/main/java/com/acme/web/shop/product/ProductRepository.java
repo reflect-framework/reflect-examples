@@ -12,7 +12,7 @@ public class ProductRepository {
 	}
 
 	public List<Product> findProduct(ProductSearchCritiria searchCritiria) {
-		String searchString = searchCritiria.getSearch().toLowerCase();
+		String searchString = (searchCritiria.getSearch()==null)?"":searchCritiria.getSearch().toLowerCase();
 		return products.stream()
 				.filter(p -> (p.getName() != null && p.getName().toLowerCase().contains(searchString))
 						|| (p.getCode() != null && p.getCode().toLowerCase().contains(searchString))

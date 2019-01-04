@@ -1,4 +1,4 @@
-package nth.reflect.example.domain.vault;
+package nth.reflect.account.vault.domain.vault;
 
 import java.util.ArrayList;
 import java.util.List;

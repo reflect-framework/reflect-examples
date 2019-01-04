@@ -1,11 +1,13 @@
 package nth.reflect.all.feature.javafx;
 
-import java.util.Arrays;
 import java.util.List;
 
-import nth.reflect.example.domain.all.feature.AllFeatureSeviceObject;
+import nth.reflect.all.feature.AllFeatureColors;
+import nth.reflect.all.feature.AllFeatureInfrastructureClasses;
+import nth.reflect.all.feature.AllFeatureServiceClasses;
 import nth.reflect.fw.javafx.ReflectApplicationForJavaFX;
 import nth.reflect.fw.layer5provider.reflection.behavior.displayname.DisplayName;
+import nth.reflect.fw.ui.style.ReflectColors;
 
 @DisplayName(englishName="Reflect for JavaFX Demo")
 public class AllFeatureForJavaFX extends ReflectApplicationForJavaFX {
@@ -17,12 +19,17 @@ public class AllFeatureForJavaFX extends ReflectApplicationForJavaFX {
 	
 	@Override
 	public List<Class<?>> getServiceClasses() {
-		return Arrays.asList(AllFeatureSeviceObject.class);
+		return new AllFeatureServiceClasses();
 	}
 
 	@Override
 	public List<Class<?>> getInfrastructureClasses() {
-		return Arrays.asList();
+		return new AllFeatureInfrastructureClasses();
+	}
+
+	@Override
+	public ReflectColors getColors() {
+		return new AllFeatureColors();
 	}
 
 }

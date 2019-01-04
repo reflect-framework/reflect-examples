@@ -1,15 +1,13 @@
 package nth.reflect.account.vault.javafx;
 
-import java.util.Arrays;
 import java.util.List;
 
-import nth.reflect.example.domain.account.AccountRepository;
-import nth.reflect.example.domain.account.AccountService;
-import nth.reflect.example.domain.tag.TagService;
-import nth.reflect.example.domain.vault.VaultService;
+import nth.reflect.account.vault.domain.AccountVaultColors;
+import nth.reflect.account.vault.domain.AccountVaultInfrastructureClasses;
+import nth.reflect.account.vault.domain.AccountVaultServiceClasses;
 import nth.reflect.fw.javafx.ReflectApplicationForJavaFX;
 import nth.reflect.fw.layer5provider.reflection.behavior.displayname.DisplayName;
-import nth.reflect.infra.generic.xml.XmlConverter;
+import nth.reflect.fw.ui.style.ReflectColors;
 
 @DisplayName(englishName="Account Vault")
 public class AccountVaultForJavaFX extends ReflectApplicationForJavaFX {
@@ -21,12 +19,17 @@ public class AccountVaultForJavaFX extends ReflectApplicationForJavaFX {
 	
 	@Override
 	public List<Class<?>> getServiceClasses() {
-		return Arrays.asList(VaultService.class, AccountService.class,TagService.class);
+		return new AccountVaultServiceClasses();
 	}
 
 	@Override
 	public List<Class<?>> getInfrastructureClasses() {
-		return Arrays.asList(AccountRepository.class, XmlConverter.class);
+		return new AccountVaultInfrastructureClasses();
+	}
+
+	@Override
+	public ReflectColors getColors() {
+		return new AccountVaultColors();
 	}
 
 }

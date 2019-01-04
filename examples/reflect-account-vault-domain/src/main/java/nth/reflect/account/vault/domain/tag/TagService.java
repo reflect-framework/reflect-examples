@@ -1,8 +1,8 @@
-package nth.reflect.example.domain.tag;
+package nth.reflect.account.vault.domain.tag;
 
 import java.util.List;
 
-import nth.reflect.example.domain.account.AccountRepository;
+import nth.reflect.account.vault.domain.account.AccountRepository;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionMode;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionModeType;
 import nth.reflect.fw.layer5provider.reflection.behavior.fonticon.FontIcon;
