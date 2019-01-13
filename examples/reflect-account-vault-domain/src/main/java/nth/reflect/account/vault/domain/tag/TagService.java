@@ -3,10 +3,10 @@ package nth.reflect.account.vault.domain.tag;
 import java.util.List;
 
 import nth.reflect.account.vault.domain.account.AccountRepository;
+import nth.reflect.fw.gui.style.fontawesome.FontAwesomeUrl;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionMode;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionModeType;
 import nth.reflect.fw.layer5provider.reflection.behavior.fonticon.FontIcon;
-import nth.reflect.fw.ui.style.fontawesome.FontAwesomeUrl;
 
 @FontIcon(fontIconUrl=FontAwesomeUrl.TAG )
 public class TagService {

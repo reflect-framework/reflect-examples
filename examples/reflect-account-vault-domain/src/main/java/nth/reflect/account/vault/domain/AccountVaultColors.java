@@ -1,7 +1,7 @@
 package nth.reflect.account.vault.domain;
 
-import nth.reflect.fw.ui.style.MaterialColorPalette;
-import nth.reflect.fw.ui.style.ReflectColors;
+import nth.reflect.fw.gui.style.MaterialColorPalette;
+import nth.reflect.fw.gui.style.ReflectColors;
 
 public class AccountVaultColors extends ReflectColors {
 

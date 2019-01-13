@@ -7,20 +7,23 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import nth.reflect.fw.generic.util.TypeUtil;
+import nth.reflect.fw.ReflectApplication;
 import nth.reflect.fw.layer5provider.reflection.ReflectionProvider;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionMode;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionModeType;
 import nth.reflect.fw.layer5provider.reflection.info.actionmethod.ActionMethodInfo;
 import nth.reflect.fw.layer5provider.reflection.info.classinfo.ClassInfo;
 import nth.reflect.fw.layer5provider.reflection.info.property.PropertyInfo;
+import nth.reflect.fw.layer5provider.reflection.info.type.TypeInfo;
 
 public class ClassDiagramService {
 
 	private final List<Class<?>> serviceClasses;
 	private final ReflectionProvider reflectionProvider;
+	private final ReflectApplication reflectApplication;
 
-	public ClassDiagramService(ReflectionProvider reflectionProvider) {
+	public ClassDiagramService(ReflectApplication reflectApplication, ReflectionProvider reflectionProvider) {
+		this.reflectApplication = reflectApplication;
 		this.reflectionProvider = reflectionProvider;
 		serviceClasses = new ArrayList<Class<?>>();
 		serviceClasses.add(ClassDiagram.class);
@@ -40,7 +43,7 @@ public class ClassDiagramService {
 		for (Class<?> serviceClass : serviceClasses) {
 			// Task task=notificationProvider.addNewTask("Finding classes",
 			// index, maxValue);
-			getReferencedClasses(reflectionProvider, serviceClass, foundClasses);
+			getReferencedClasses(serviceClass, foundClasses);
 		}
 
 		List<ClassFeature> classFeatures = new ArrayList<ClassFeature>();
@@ -50,10 +53,8 @@ public class ClassDiagramService {
 		Collections.sort(classFeatures, new Comparator<ClassFeature>() {
 
 			@Override
-			public int compare(ClassFeature classFeature1,
-					ClassFeature classFeature2) {
-				return classFeature1.toString().compareTo(
-						classFeature2.toString());
+			public int compare(ClassFeature classFeature1, ClassFeature classFeature2) {
+				return classFeature1.toString().compareTo(classFeature2.toString());
 			}
 		});
 
@@ -62,32 +63,31 @@ public class ClassDiagramService {
 		return classFeatures;
 	}
 
-	private void getReferencedClasses(ReflectionProvider reflectionProvider,
-			Class<? extends Object> clazz, Set<Class<?>> foundClasses) {
-		if (clazz != null && !foundClasses.contains(clazz)
-				&& !TypeUtil.isJavaType(clazz) && !TypeUtil.isVoidType(clazz)) {
-			foundClasses.add(clazz);
-			System.out.println(clazz.getCanonicalName());
+	private void getReferencedClasses(Class<? extends Object> type, Set<Class<?>> foundClasses) {
+		TypeInfo typeInfo = new TypeInfo(reflectApplication, type, type);
+		if (type != null && !foundClasses.contains(type) && !typeInfo.isJavaVariableType() && !typeInfo.isVoid()) {
+			foundClasses.add(type);
+			System.out.println(type.getCanonicalName());
 
-			ClassInfo classInfo = reflectionProvider.getClassInfo(clazz);
-			
+			ClassInfo classInfo = reflectionProvider.getClassInfo(type);
+
 			List<PropertyInfo> propertyInfos = classInfo.getPropertyInfosSorted();
 			for (PropertyInfo propertyInfo : propertyInfos) {
-				Class<?> propertyType = propertyInfo.getPropertyType()
-						.getType();
-				getReferencedClasses(reflectionProvider, propertyType,
-						foundClasses);// recursive call
+				Class<?> propertyType = propertyInfo.getTypeInfo().getType();
+				// recursive call
+
+				getReferencedClasses(propertyType, foundClasses);
 			}
 
 			List<ActionMethodInfo> actionMethodInfos = classInfo.getActionMethodInfosSorted();
 			for (ActionMethodInfo actionMethodInfo : actionMethodInfos) {
 				Class<?> returnType = actionMethodInfo.getGenericReturnType();
-				getReferencedClasses(reflectionProvider, returnType,
-						foundClasses);// recursive call
+				// recursive call
+				getReferencedClasses(returnType, foundClasses);
 
 				Class<?> parameterType = actionMethodInfo.getGenericParameterType();
-				getReferencedClasses(reflectionProvider, parameterType,
-						foundClasses);// recursive call
+				// recursive call
+				getReferencedClasses(parameterType, foundClasses);
 			}
 		}
 	}
@@ -104,11 +104,9 @@ public class ClassDiagramService {
 		if (objectClass == null) {
 			// a method without a return value (void) or without a parameter
 			// does not have a type!
-			throw new RuntimeException(classFeature.toString()
-					+ " does not have a type reference.");
+			throw new RuntimeException(classFeature.toString() + " does not have a type reference.");
 		} else {
-			ClassDiagram classDiagram = new ClassDiagram(reflectionProvider,
-					objectClass);
+			ClassDiagram classDiagram = new ClassDiagram(reflectionProvider, objectClass);
 			return classDiagram;
 		}
 	}

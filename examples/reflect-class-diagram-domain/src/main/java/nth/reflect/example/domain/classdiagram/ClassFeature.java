@@ -20,7 +20,7 @@ public class ClassFeature {
 	}
 
 	public ClassFeature(PropertyInfo propertyInfo) {
-		this(getPropertyRepresentation(propertyInfo), propertyInfo.getPropertyType().getType());
+		this(getPropertyRepresentation(propertyInfo), propertyInfo.getTypeInfo().getType());
 	}
 
 	public ClassFeature(ActionMethodInfo actionMethodInfo) {
@@ -57,7 +57,7 @@ public class ClassFeature {
 		StringBuffer representation = new StringBuffer();
 		representation.append(propertyInfo.getSimpleName());
 		representation.append(" ");
-		representation.append(propertyInfo.getPropertyType().toString());
+		representation.append(propertyInfo.getTypeInfo().toString());
 		if (propertyInfo.isReadOnly()) {
 			representation.append(" (Read-only)");
 		}

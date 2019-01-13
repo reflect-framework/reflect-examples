@@ -6,9 +6,9 @@ import com.acme.web.shop.WebShopColors;
 import com.acme.web.shop.WebShopInfrastructureClasses;
 import com.acme.web.shop.WebShopServiceClasses;
 
+import nth.reflect.fw.gui.style.ReflectColors;
 import nth.reflect.fw.layer5provider.reflection.behavior.description.Description;
 import nth.reflect.fw.layer5provider.reflection.behavior.displayname.DisplayName;
-import nth.reflect.fw.ui.style.ReflectColors;
 import nth.reflect.fw.ui.swing.ReflecttApplicationForSwing;
 
 @DisplayName(englishName = "ACME Web Shop")

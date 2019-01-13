@@ -8,6 +8,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 
+import nth.reflect.fw.gui.style.fontawesome.FontAwesomeUrl;
 import nth.reflect.fw.infrastructure.random.Random;
 import nth.reflect.fw.layer1userinterface.controller.DownloadStream;
 import nth.reflect.fw.layer2service.ServiceObject;
@@ -16,7 +17,6 @@ import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.Execution
 import nth.reflect.fw.layer5provider.reflection.behavior.fonticon.FontIcon;
 import nth.reflect.fw.layer5provider.reflection.behavior.parameterfactory.ParameterFactory;
 import nth.reflect.fw.layer5provider.reflection.info.actionmethod.ActionMethod;
-import nth.reflect.fw.ui.style.fontawesome.FontAwesomeUrl;
 
 /**
  * {@link ServiceObject} class to test all the supported {@link ActionMethod}s.

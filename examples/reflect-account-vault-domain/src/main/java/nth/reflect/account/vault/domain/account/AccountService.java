@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import nth.reflect.account.vault.domain.tag.Tag;
+import nth.reflect.fw.gui.style.fontawesome.FontAwesomeUrl;
 import nth.reflect.fw.layer5provider.notification.NotificationProvider;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionMode;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionModeType;
 import nth.reflect.fw.layer5provider.reflection.behavior.fonticon.FontIcon;
-import nth.reflect.fw.ui.style.fontawesome.FontAwesomeUrl;
 
 @FontIcon(fontIconUrl=FontAwesomeUrl.USERS )
 public class AccountService {

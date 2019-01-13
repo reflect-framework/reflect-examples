@@ -5,9 +5,9 @@ import java.util.List;
 import nth.reflect.all.feature.AllFeatureColors;
 import nth.reflect.all.feature.AllFeatureInfrastructureClasses;
 import nth.reflect.all.feature.AllFeatureServiceClasses;
+import nth.reflect.fw.gui.style.ReflectColors;
 import nth.reflect.fw.javafx.ReflectApplicationForJavaFX;
 import nth.reflect.fw.layer5provider.reflection.behavior.displayname.DisplayName;
-import nth.reflect.fw.ui.style.ReflectColors;
 
 @DisplayName(englishName="Reflect for JavaFX Demo")
 public class AllFeatureForJavaFX extends ReflectApplicationForJavaFX {
