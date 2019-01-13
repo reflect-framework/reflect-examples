@@ -28,10 +28,10 @@ public class ClassFeature {
 	}
 
 	private static Class<?> getMethodType(ActionMethodInfo actionMethodInfo) {
-		Class<?> returnType = actionMethodInfo.getGenericReturnType();
+		Class<?> returnType = actionMethodInfo.getReturnTypeInfo().getGenericType();
 		if (returnType == Void.TYPE) {
 			// if method is of type void, try to get the type of the parameter
-			Class<?> parameterType = actionMethodInfo.getGenericParameterType();
+			Class<?> parameterType = actionMethodInfo.getFirstParameterTypeInfo().getGenericType();
 			return parameterType;
 		} else {
 			return returnType;
@@ -43,12 +43,12 @@ public class ClassFeature {
 		representation.append(actionMethodInfo.getSimpleName());
 		representation.append("(");
 		if (actionMethodInfo.hasParameter()) {
-			representation.append(actionMethodInfo.getParameterType().toString());
+			representation.append(actionMethodInfo.getFirstParameterTypeInfo().getType().toString());
 		}
 		representation.append(")");
 		if (actionMethodInfo.hasParameter()) {
 			representation.append(" : ");
-			representation.append(actionMethodInfo.getReturnType().toString());
+			representation.append(actionMethodInfo.getReturnTypeInfo().getType().toString());
 		}
 		return representation.toString();
 	}
