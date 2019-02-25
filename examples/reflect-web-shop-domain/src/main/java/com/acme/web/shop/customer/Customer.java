@@ -24,8 +24,7 @@ public class Customer {
 	}
 
 	public String getFullName() {
-		return new TitleBuilder().append(givenName).append(familyName)
-				.toString();
+		return TitleBuilder.getInstance().append(givenName).append(familyName).toString();
 	}
 
 	public boolean isBonusMember() {

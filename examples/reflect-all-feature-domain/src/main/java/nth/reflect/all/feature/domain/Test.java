@@ -56,7 +56,7 @@ public class Test {
 
 	private PickOrder myEnum;
 
-	@Order(sequenceNumber = 1)
+	@Order(value = 1)
 	public boolean isMyBoolean() {
 		return myBoolean;
 	}

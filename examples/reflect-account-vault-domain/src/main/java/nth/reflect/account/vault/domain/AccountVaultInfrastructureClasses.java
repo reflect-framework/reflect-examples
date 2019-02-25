@@ -1,15 +1,17 @@
 package nth.reflect.account.vault.domain;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import nth.reflect.account.vault.domain.account.AccountRepository;
 import nth.reflect.infra.generic.xml.XmlConverter;
 
-@SuppressWarnings("serial")
-public class AccountVaultInfrastructureClasses extends ArrayList<Class<?>> {
+public class AccountVaultInfrastructureClasses {
 
-	public AccountVaultInfrastructureClasses() {
-		super(Arrays.asList(AccountRepository.class, XmlConverter.class));
+	private static List<Class<? extends Object>> infrastructureClasses = Arrays.asList(AccountRepository.class,
+			XmlConverter.class);
+
+	public static List<Class<? extends Object>> get() {
+		return infrastructureClasses;
 	}
 }

@@ -5,7 +5,7 @@ import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.bval.constraints.NotEmpty;
+import javax.validation.constraints.NotBlank;
 
 import nth.reflect.fw.generic.util.TitleBuilder;
 import nth.reflect.fw.layer5provider.reflection.behavior.order.Order;
@@ -27,8 +27,8 @@ public class Contact {
 		events = new ArrayList<>();
 	}
 
-	@Order(sequenceNumber = 10)
-	@NotEmpty
+	@Order(value = 10)
+	@NotBlank
 	public String getFirstName() {
 		return firstName;
 	}
@@ -37,7 +37,7 @@ public class Contact {
 		this.firstName = firstName;
 	}
 
-	@Order(sequenceNumber = 20)
+	@Order(value = 20)
 	public String getMiddleName() {
 		return middleName;
 	}
@@ -46,7 +46,7 @@ public class Contact {
 		this.middleName = middleName;
 	}
 
-	@Order(sequenceNumber = 30)
+	@Order(value = 30)
 	public String getLastName() {
 		return lastName;
 	}
@@ -55,7 +55,7 @@ public class Contact {
 		this.lastName = lastName;
 	}
 
-	@Order(sequenceNumber = 40)
+	@Order(value = 40)
 	public List<String> getPhoneNumbers() {
 		return phoneNumbers;
 	}
@@ -64,7 +64,7 @@ public class Contact {
 		this.phoneNumbers = phoneNumbers;
 	}
 
-	@Order(sequenceNumber = 50)
+	@Order(value = 50)
 	public List<String> geteMailAdresses() {
 		return eMailAdresses;
 	}
@@ -73,7 +73,7 @@ public class Contact {
 		this.eMailAdresses = eMailAdresses;
 	}
 
-	@Order(sequenceNumber = 60)
+	@Order(value = 60)
 	public List<Address> getAddresses() {
 		return addresses;
 	}
@@ -82,7 +82,7 @@ public class Contact {
 		this.addresses = addresses;
 	}
 
-	@Order(sequenceNumber = 70)
+	@Order(value = 70)
 	public List<Event> getEvents() {
 		return events;
 	}
@@ -106,7 +106,7 @@ public class Contact {
 	}
 
 	public String getFullName() {
-		return new TitleBuilder(" ").append(firstName).append(middleName).append(lastName).toString();
+		return TitleBuilder.getInstance(" ").append(firstName).append(middleName).append(lastName).toString();
 	}
 
 }

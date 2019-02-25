@@ -25,7 +25,7 @@ import nth.reflect.fw.layer5provider.reflection.behavior.order.Order;
  */
 public class TestWithDisabledProperties extends Test {
 
-	@Order(sequenceNumber = 1)
+	@Order(value = 1)
 	@Override
 	public boolean isMyBoolean() {
 		return super.isMyBoolean();

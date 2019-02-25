@@ -1,12 +1,14 @@
 package nth.reflect.all.feature;
 
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import nth.reflect.all.feature.domain.TestRandomGenerator;
 
-@SuppressWarnings("serial")
-public class AllFeatureInfrastructureClasses extends ArrayList<Class<?>> {
-	public AllFeatureInfrastructureClasses() {
-		add(TestRandomGenerator.class);
+public class AllFeatureInfrastructureClasses {
+	private static List<Class<?>> infrastructureClasses = Arrays.asList(TestRandomGenerator.class);
+
+	public static List<Class<?>> get() {
+		return infrastructureClasses;
 	}
 }

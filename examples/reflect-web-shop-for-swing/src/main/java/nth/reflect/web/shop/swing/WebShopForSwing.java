@@ -21,16 +21,16 @@ public class WebShopForSwing extends ReflecttApplicationForSwing {
 
 	@Override
 	public List<Class<?>> getServiceClasses() {
-		return new WebShopServiceClasses();
+		return WebShopServiceClasses.get();
 	}
 
 	@Override
 	public List<Class<?>> getInfrastructureClasses() {
-		return new WebShopInfrastructureClasses();
+		return WebShopInfrastructureClasses.get();
 	}
 
 	@Override
 	public ReflectColors getColors() {
-		return new WebShopColors();
+		return WebShopColors.get();
 	}
 }

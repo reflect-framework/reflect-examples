@@ -9,27 +9,26 @@ import nth.reflect.fw.gui.style.ReflectColors;
 import nth.reflect.fw.javafx.ReflectApplicationForJavaFX;
 import nth.reflect.fw.layer5provider.reflection.behavior.displayname.DisplayName;
 
-@DisplayName(englishName="Account Vault")
+@DisplayName(englishName = "Account Vault")
 public class AccountVaultForJavaFX extends ReflectApplicationForJavaFX {
 
-	
 	public static void main(String[] args) {
 		launch(args);
 	}
-	
+
 	@Override
 	public List<Class<?>> getServiceClasses() {
-		return new AccountVaultServiceClasses();
+		return AccountVaultServiceClasses.get();
 	}
 
 	@Override
 	public List<Class<?>> getInfrastructureClasses() {
-		return new AccountVaultInfrastructureClasses();
+		return AccountVaultInfrastructureClasses.get();
 	}
 
 	@Override
 	public ReflectColors getColors() {
-		return new AccountVaultColors();
+		return AccountVaultColors.get();
 	}
 
 }

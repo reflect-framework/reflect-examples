@@ -17,7 +17,7 @@ public class Product {
 	private String supplier;
 
 	@Hidden(exceptForRoleNames = "employee")
-	@Order(sequenceNumber = 10)
+	@Order(value = 10)
 	public String getCode() {
 		return code;
 	}
@@ -26,7 +26,7 @@ public class Product {
 		this.code = code;
 	}
 
-	@Order(sequenceNumber = 20)
+	@Order(value = 20)
 	public String getName() {
 		return name;
 	}
@@ -35,7 +35,7 @@ public class Product {
 		this.name = name;
 	}
 
-	@Order(sequenceNumber = 30)
+	@Order(value = 30)
 	@Hidden(propertyHiddenFor = HiddenFor.TABLES)
 	public String getDetails() {
 		return details;
@@ -45,7 +45,7 @@ public class Product {
 		this.details = details;
 	}
 
-	@Order(sequenceNumber = 40)
+	@Order(value = 40)
 	@Format(pattern = CURRENCY_FORMAT)
 	public BigDecimal getPrice() {
 		return price;
@@ -57,7 +57,7 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return new TitleBuilder().append(name).append(price, CURRENCY_FORMAT).toString();
+		return TitleBuilder.getInstance().append(name).append(price, CURRENCY_FORMAT).toString();
 	}
 
 	public void setSupplier(String supplier) {
@@ -68,5 +68,4 @@ public class Product {
 		return supplier;
 	}
 
-	
 }

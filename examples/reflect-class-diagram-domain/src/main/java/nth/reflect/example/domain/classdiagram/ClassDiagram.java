@@ -56,7 +56,7 @@ public class ClassDiagram {
 		}
 	}
 
-	@Order(sequenceNumber=1)
+	@Order(value=1)
 	public ClassFeature getName() {
 		return name;
 	}
@@ -65,7 +65,7 @@ public class ClassDiagram {
 		this.name = name;
 	}
 
-	@Order(sequenceNumber=2)
+	@Order(value=2)
 	public ClassFeature getSuperclass() {
 		return superclass;
 	}
@@ -74,17 +74,17 @@ public class ClassDiagram {
 		this.superclass = superclass;
 	}
 
-	@Order(sequenceNumber=3)
+	@Order(value=3)
 	public List<ClassFeature> getInterfaces() {
 		return interfaces;
 	}
 
-	@Order(sequenceNumber=4)
+	@Order(value=4)
 	public List<ClassFeature> getProperties() {
 		return properties;
 	}
 
-	@Order(sequenceNumber=5)
+	@Order(value=5)
 	public List<ClassFeature> getMethods() {
 		return methods;
 	}

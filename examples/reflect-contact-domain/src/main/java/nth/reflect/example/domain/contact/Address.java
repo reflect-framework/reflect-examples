@@ -12,14 +12,14 @@ public class Address {
 	private String country;
 	private AddressType addressType;
 	
-	@Order(sequenceNumber=10)
+	@Order(value=10)
 	public String getStreetName() {
 		return streetName;
 	}
 	public void setStreetName(String streetName) {
 		this.streetName = streetName;
 	}
-	@Order(sequenceNumber=20)
+	@Order(value=20)
 	public String getHouseNumber() {
 		return houseNumber;
 	}
@@ -27,35 +27,35 @@ public class Address {
 	public void setHouseNumber(String houseNumber) {
 		this.houseNumber = houseNumber;
 	}
-	@Order(sequenceNumber=30)
+	@Order(value=30)
 	public String getPostalCode() {
 		return postalCode;
 	}
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
 	}
-	@Order(sequenceNumber=40)
+	@Order(value=40)
 	public String getCity() {
 		return city;
 	}
 	public void setCity(String city) {
 		this.city = city;
 	}
-	@Order(sequenceNumber=50)
+	@Order(value=50)
 	public String getRegion() {
 		return region;
 	}
 	public void setRegion(String region) {
 		this.region = region;
 	}
-	@Order(sequenceNumber=60)
+	@Order(value=60)
 	public String getCountry() {
 		return country;
 	}
 	public void setCountry(String country) {
 		this.country = country;
 	}
-	@Order(sequenceNumber=70)
+	@Order(value=70)
 	public AddressType getAddressType() {
 		return addressType;
 	}

@@ -16,17 +16,17 @@ public class AllFeatureForSwing extends ReflecttApplicationForSwing {
 
 	@Override
 	public List<Class<?>> getServiceClasses() {
-		return new AllFeatureServiceClasses();
+		return AllFeatureServiceClasses.get();
 	}
 
 	@Override
 	public List<Class<?>> getInfrastructureClasses() {
-		return new AllFeatureInfrastructureClasses();
+		return AllFeatureInfrastructureClasses.get();
 	}
 
 	@Override
 	public ReflectColors getColors() {
-		return new AllFeatureColors();
+		return AllFeatureColors.get();
 	}
 
 }

@@ -9,27 +9,26 @@ import nth.reflect.fw.gui.style.ReflectColors;
 import nth.reflect.fw.javafx.ReflectApplicationForJavaFX;
 import nth.reflect.fw.layer5provider.reflection.behavior.displayname.DisplayName;
 
-@DisplayName(englishName="Reflect for JavaFX Demo")
+@DisplayName(englishName = "Reflect for JavaFX Demo")
 public class AllFeatureForJavaFX extends ReflectApplicationForJavaFX {
 
-	
 	public static void main(String[] args) {
 		launch(args);
 	}
-	
+
 	@Override
 	public List<Class<?>> getServiceClasses() {
-		return new AllFeatureServiceClasses();
+		return AllFeatureServiceClasses.get();
 	}
 
 	@Override
 	public List<Class<?>> getInfrastructureClasses() {
-		return new AllFeatureInfrastructureClasses();
+		return AllFeatureInfrastructureClasses.get();
 	}
 
 	@Override
 	public ReflectColors getColors() {
-		return new AllFeatureColors();
+		return AllFeatureColors.get();
 	}
 
 }
