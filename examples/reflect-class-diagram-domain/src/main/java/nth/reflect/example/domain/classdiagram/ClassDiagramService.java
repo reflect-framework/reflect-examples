@@ -12,7 +12,7 @@ import nth.reflect.fw.layer5provider.reflection.ReflectionProvider;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionMode;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionModeType;
 import nth.reflect.fw.layer5provider.reflection.info.actionmethod.ActionMethodInfo;
-import nth.reflect.fw.layer5provider.reflection.info.classinfo.ClassInfo;
+import nth.reflect.fw.layer5provider.reflection.info.classinfo.DomainClassInfo;
 import nth.reflect.fw.layer5provider.reflection.info.property.PropertyInfo;
 import nth.reflect.fw.layer5provider.reflection.info.type.TypeInfo;
 
@@ -69,9 +69,9 @@ public class ClassDiagramService {
 			foundClasses.add(type);
 			System.out.println(type.getCanonicalName());
 
-			ClassInfo classInfo = reflectionProvider.getClassInfo(type);
+			DomainClassInfo domainClassInfo = reflectionProvider.getDomainClassInfo(type);
 
-			List<PropertyInfo> propertyInfos = classInfo.getPropertyInfosSorted();
+			List<PropertyInfo> propertyInfos = domainClassInfo.getPropertyInfosSorted();
 			for (PropertyInfo propertyInfo : propertyInfos) {
 				Class<?> propertyType = propertyInfo.getTypeInfo().getType();
 				// recursive call
@@ -79,7 +79,7 @@ public class ClassDiagramService {
 				getReferencedClasses(propertyType, foundClasses);
 			}
 
-			List<ActionMethodInfo> actionMethodInfos = classInfo.getActionMethodInfosSorted();
+			List<ActionMethodInfo> actionMethodInfos = domainClassInfo.getActionMethodInfosSorted();
 			for (ActionMethodInfo actionMethodInfo : actionMethodInfos) {
 				Class<?> returnType = actionMethodInfo.getReturnTypeInfo().getGenericType();
 				// recursive call

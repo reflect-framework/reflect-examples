@@ -6,7 +6,7 @@ import java.util.List;
 import nth.reflect.fw.layer5provider.reflection.ReflectionProvider;
 import nth.reflect.fw.layer5provider.reflection.behavior.order.Order;
 import nth.reflect.fw.layer5provider.reflection.info.actionmethod.ActionMethodInfo;
-import nth.reflect.fw.layer5provider.reflection.info.classinfo.ClassInfo;
+import nth.reflect.fw.layer5provider.reflection.info.classinfo.DomainClassInfo;
 import nth.reflect.fw.layer5provider.reflection.info.property.PropertyInfo;
 
 public class ClassDiagram {
@@ -34,29 +34,29 @@ public class ClassDiagram {
 		if (superClass != null) {
 			setSuperclass(new ClassFeature(superClass));
 		}
-		
+
 		// interfaces
 		Class<?>[] interfaces = objectClass.getInterfaces();
 		for (Class<?> interfaze : interfaces) {
 			getInterfaces().add(new ClassFeature(interfaze));
 		}
 
-		ClassInfo classInfo=reflectionProvider.getClassInfo(objectClass);
-		
+		DomainClassInfo domainClassInfo = reflectionProvider.getDomainClassInfo(objectClass);
+
 		// properties
-		List<PropertyInfo> propertyInfos = classInfo.getPropertyInfosSorted();
+		List<PropertyInfo> propertyInfos = domainClassInfo.getPropertyInfosSorted();
 		for (PropertyInfo propertyInfo : propertyInfos) {
 			getProperties().add(new ClassFeature(propertyInfo));
 		}
 
 		// methods
-		List<ActionMethodInfo> actionMethodInfos = classInfo.getActionMethodInfosSorted();
+		List<ActionMethodInfo> actionMethodInfos = domainClassInfo.getActionMethodInfosSorted();
 		for (ActionMethodInfo actionMethodInfo : actionMethodInfos) {
 			getMethods().add(new ClassFeature(actionMethodInfo));
 		}
 	}
 
-	@Order(value=1)
+	@Order(value = 1)
 	public ClassFeature getName() {
 		return name;
 	}
@@ -65,7 +65,7 @@ public class ClassDiagram {
 		this.name = name;
 	}
 
-	@Order(value=2)
+	@Order(value = 2)
 	public ClassFeature getSuperclass() {
 		return superclass;
 	}
@@ -74,17 +74,17 @@ public class ClassDiagram {
 		this.superclass = superclass;
 	}
 
-	@Order(value=3)
+	@Order(value = 3)
 	public List<ClassFeature> getInterfaces() {
 		return interfaces;
 	}
 
-	@Order(value=4)
+	@Order(value = 4)
 	public List<ClassFeature> getProperties() {
 		return properties;
 	}
 
-	@Order(value=5)
+	@Order(value = 5)
 	public List<ClassFeature> getMethods() {
 		return methods;
 	}
