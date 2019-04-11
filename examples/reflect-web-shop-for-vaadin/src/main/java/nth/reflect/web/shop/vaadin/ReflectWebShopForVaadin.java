@@ -1,0 +1,32 @@
+package nth.reflect.web.shop.vaadin;
+
+import java.util.List;
+
+import com.acme.web.shop.WebShopColors;
+import com.acme.web.shop.WebShopInfrastructureClasses;
+import com.acme.web.shop.WebShopServiceClasses;
+import com.vaadin.flow.router.Route;
+
+import nth.reflect.fw.gui.style.ReflectColors;
+import nth.reflect.ui.vaadin.ReflectApplicationForVaadin;
+
+@Route("")
+public class ReflectWebShopForVaadin extends ReflectApplicationForVaadin {
+
+	private static final long serialVersionUID = 6772233296199079883L;
+
+	@Override
+	public List<Class<?>> getServiceClasses() {
+		return WebShopServiceClasses.get();
+	}
+
+	@Override
+	public List<Class<?>> getInfrastructureClasses() {
+		return WebShopInfrastructureClasses.get();
+	}
+
+	@Override
+	public ReflectColors getColors() {
+		return WebShopColors.get();
+	}
+}

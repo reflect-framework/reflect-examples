@@ -18,6 +18,7 @@
 		<module>reflect-web-shop-domain</module>
 		<module>reflect-web-shop-for-javafx</module>
 		<module>reflect-web-shop-for-swing</module>
+		<module>reflect-web-shop-for-vaadin</module>
 	</modules>
 
 	<build>
