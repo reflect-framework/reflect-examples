@@ -57,7 +57,7 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return TitleBuilder.getInstance().append(name).append(price, CURRENCY_FORMAT).toString();
+		return new TitleBuilder().append(name).append(price, CURRENCY_FORMAT).toString();
 	}
 
 	public void setSupplier(String supplier) {

@@ -106,7 +106,7 @@ public class Contact {
 	}
 
 	public String getFullName() {
-		return TitleBuilder.getInstance(" ").append(firstName).append(middleName).append(lastName).toString();
+		return new TitleBuilder().setSeperator(" ").append(firstName).append(middleName).append(lastName).toString();
 	}
 
 }
