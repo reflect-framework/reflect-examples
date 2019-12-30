@@ -2,16 +2,14 @@ package nth.reflect.web.shop.vaadin;
 
 import java.util.List;
 
-import com.acme.web.shop.WebShopColors;
 import com.acme.web.shop.WebShopInfrastructureClasses;
 import com.acme.web.shop.WebShopServiceClasses;
 import com.vaadin.flow.router.Route;
 
-import nth.reflect.fw.gui.style.ReflectColors;
-import nth.reflect.ui.vaadin.ReflectApplicationForVaadin;
+import nth.reflect.ui.vaadin.ReflectApplicationForVaadin14;
 
 @Route("")
-public class ReflectWebShopForVaadin extends ReflectApplicationForVaadin {
+public class ReflectWebShopForVaadin extends ReflectApplicationForVaadin14 {
 
 	private static final long serialVersionUID = 6772233296199079883L;
 
@@ -25,8 +23,8 @@ public class ReflectWebShopForVaadin extends ReflectApplicationForVaadin {
 		return WebShopInfrastructureClasses.get();
 	}
 
-	@Override
-	public ReflectColors getColors() {
-		return WebShopColors.get();
-	}
+//	@Override
+//	public ReflectColors getColors() {
+//		return WebShopColors.get();
+//	}
 }
