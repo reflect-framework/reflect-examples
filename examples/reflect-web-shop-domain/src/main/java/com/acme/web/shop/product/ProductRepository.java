@@ -8,11 +8,11 @@ public class ProductRepository {
 	private final List<Product> products;
 
 	public ProductRepository(ProductGenerator productGenerator) {
-		products = productGenerator.generateList(10);
+		products = productGenerator.generateList(20);
 	}
 
 	public List<Product> findProduct(ProductSearchCritiria searchCritiria) {
-		String searchString = (searchCritiria.getSearch()==null)?"":searchCritiria.getSearch().toLowerCase();
+		String searchString = (searchCritiria.getSearch() == null) ? "" : searchCritiria.getSearch().toLowerCase();
 		return products.stream()
 				.filter(p -> (p.getName() != null && p.getName().toLowerCase().contains(searchString))
 						|| (p.getCode() != null && p.getCode().toLowerCase().contains(searchString))
@@ -20,7 +20,7 @@ public class ProductRepository {
 				.collect(Collectors.toList());
 	}
 
-	public List<Product> bestSellingProducts() {
+	public List<Product> allProducts() {
 		return products;
 	}
 
