@@ -7,9 +7,8 @@
     <artifactId>examples</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>nth.reflect.framework.example</groupId>
   <artifactId>reflect-for-vaadin14-archetype</artifactId>
   <version>0.0.1</version>
   <name>reflect-for-vaadin14-archetype</name>
-  <url>https://github.com/ntenhoeve/Reflect-Framework/wiki</url>
+  <url>https://github.com/reflect-framework/reflect-framework/wiki</url>
 </project>
