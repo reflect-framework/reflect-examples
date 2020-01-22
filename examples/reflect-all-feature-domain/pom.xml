@@ -2,22 +2,22 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>nth.reflect.framework.example</groupId>
+		<groupId>com.github.reflect-framework.example</groupId>
 		<artifactId>examples</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.1</version>
 	</parent>
 	<artifactId>reflect-all-feature-domain</artifactId>
 	<description>Example domain to test all domain object properties and service object method types for the Reflection Framework</description>
 	<dependencies>
 		<dependency>
-			<groupId>nth.reflect.framework</groupId>
+			<groupId>com.github.reflect-framework</groupId>
 			<artifactId>reflect-graphical-user-interface</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.1</version>
 		</dependency>
 		<dependency>
-			<groupId>nth.reflect.framework</groupId>
+			<groupId>com.github.reflect-framework</groupId>
 			<artifactId>reflect-infrastructure-random-generator</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.1</version>
 		</dependency>
 	</dependencies>
 </project>

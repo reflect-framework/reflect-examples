@@ -3,9 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>nth.reflect.framework.example</groupId>
+		<groupId>com.github.reflect-framework.example</groupId>
 		<artifactId>examples</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.1</version>
 	</parent>
 	<artifactId>reflect-web-shop-for-vaadin</artifactId>
 	<packaging>war</packaging>
@@ -15,7 +15,7 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-	<failOnMissingWebXml>false</failOnMissingWebXml>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
 
 		<vaadin.version>14.0.13</vaadin.version>
 
@@ -127,40 +127,22 @@
 		</dependency>
 
 		<dependency>
-			<groupId>nth.reflect.framework</groupId>
-			<artifactId>reflect-graphical-user-interface</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-
-		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.37</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml</artifactId>
-			<version>3.9</version>
+			<groupId>com.github.reflect-framework</groupId>
+			<artifactId>reflect-for-vaadin14</artifactId>
+			<version>0.0.1</version>
 		</dependency>
 
 		<dependency>
-			<groupId>nth.reflect.framework</groupId>
-			<artifactId>reflect-for-vaadin14</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>nth.reflect.framework.example</groupId>
+			<groupId>com.github.reflect-framework.example</groupId>
 			<artifactId>reflect-web-shop-domain</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.1</version>
 		</dependency>
 
 

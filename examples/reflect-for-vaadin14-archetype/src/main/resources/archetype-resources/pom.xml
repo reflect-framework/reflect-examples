@@ -125,12 +125,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>nth.reflect.framework</groupId>
-			<artifactId>reflect-graphical-user-interface</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-
-		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>3.8.1</version>
@@ -138,33 +132,18 @@
 		</dependency>
 
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.37</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml</artifactId>
-			<version>3.9</version>
-		</dependency>
-
-		<dependency>
-			<groupId>nth.reflect.framework</groupId>
+			<groupId>com.github.reflect-framework</groupId>
 			<artifactId>reflect-for-vaadin14</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.1</version>
 		</dependency>
 
 		<dependency>
-			<groupId>nth.reflect.framework.example</groupId>
+			<groupId>com.github.reflect-framework.example</groupId>
 			<artifactId>reflect-web-shop-domain</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.1</version>
 		</dependency>
-
 
 	</dependencies>
-
-
 
 	<build>
 		<defaultGoal>jetty:run</defaultGoal>

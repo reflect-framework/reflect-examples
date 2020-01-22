@@ -1,14 +1,15 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>nth.reflect.framework.example</groupId>
-    <artifactId>examples</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <artifactId>reflect-for-vaadin14-archetype</artifactId>
-  <version>0.0.1</version>
-  <name>reflect-for-vaadin14-archetype</name>
-  <url>https://github.com/reflect-framework/reflect-framework/wiki</url>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.github.reflect-framework.example</groupId>
+		<artifactId>examples</artifactId>
+		<version>0.0.1</version>
+	</parent>
+	<artifactId>reflect-for-vaadin14-archetype</artifactId>
+	<name>reflect-for-vaadin14-archetype</name>
+	<url>https://github.com/reflect-framework/reflect-framework/wiki</url>
 </project>
