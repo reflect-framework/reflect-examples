@@ -4,19 +4,19 @@
 	<parent>
 		<groupId>com.github.reflect-framework.example</groupId>
 		<artifactId>examples</artifactId>
-		<version>0.0.1</version>
+		<version>0.0.2-SNAPSHOT</version>
 	</parent>
 	<artifactId>reflect-account-vault-for-javafx</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>com.github.reflect-framework</groupId>
 			<artifactId>reflect-for-javafx</artifactId>
-			<version>0.0.1</version>
+			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.reflect-framework.example</groupId>
 			<artifactId>reflect-account-vault-domain</artifactId>
-			<version>0.0.1</version>
+			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>

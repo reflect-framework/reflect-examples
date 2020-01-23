@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>com.github.reflect-framework.example</groupId>
 		<artifactId>examples</artifactId>
-		<version>0.0.1</version>
+		<version>0.0.2-SNAPSHOT</version>
 	</parent>
 	<artifactId>reflect-all-feature-domain</artifactId>
 	<description>Example domain to test all domain object properties and service object method types for the Reflection Framework</description>
@@ -12,12 +12,12 @@
 		<dependency>
 			<groupId>com.github.reflect-framework</groupId>
 			<artifactId>reflect-graphical-user-interface</artifactId>
-			<version>0.0.1</version>
+			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.reflect-framework</groupId>
 			<artifactId>reflect-infrastructure-random-generator</artifactId>
-			<version>0.0.1</version>
+			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>
