@@ -107,7 +107,7 @@ public class AllFeartureDomainObject {
 		this.myText = myText;
 	}
 
-	@TextFieldMode(mode = TextFieldModeType.TEXT_AREA)
+	@TextFieldMode(mode = TextFieldModeType.MILTI_LINE)
 	public String getMyTextArea() {
 		return myTextArea;
 	}

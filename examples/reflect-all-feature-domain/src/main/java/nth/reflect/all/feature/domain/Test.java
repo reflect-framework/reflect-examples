@@ -130,7 +130,7 @@ public class Test {
 		this.myText = myText;
 	}
 
-	@TextFieldMode(mode = TextFieldModeType.TEXT_AREA)
+	@TextFieldMode(mode = TextFieldModeType.MILTI_LINE)
 	public String getMyTextArea() {
 		return myTextArea;
 	}
