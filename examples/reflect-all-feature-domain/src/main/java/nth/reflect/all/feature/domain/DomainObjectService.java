@@ -12,6 +12,7 @@ import nth.reflect.fw.gui.style.fontawesome.FontAwesomeUrl;
 import nth.reflect.fw.infrastructure.random.Random;
 import nth.reflect.fw.layer1userinterface.controller.DownloadStream;
 import nth.reflect.fw.layer2service.ServiceObject;
+import nth.reflect.fw.layer3domain.DomainObject;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionMode;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionModeType;
 import nth.reflect.fw.layer5provider.reflection.behavior.fonticon.FontIcon;
@@ -19,32 +20,32 @@ import nth.reflect.fw.layer5provider.reflection.behavior.parameterfactory.Parame
 import nth.reflect.fw.layer5provider.reflection.info.actionmethod.ActionMethod;
 
 /**
- * {@link ServiceObject} class to test all the supported {@link ActionMethod}s.
+ * {@link ServiceObject} class to domainObject all the supported {@link ActionMethod}s.
  * 
  * @author nilsth
  *
  */
 @FontIcon(fontIconUrl = FontAwesomeUrl.CHECK)
 
-public class TestService {
-	private final List<Test> tests;
-	private final TestRandomGenerator testRandomGenerator;
+public class DomainObjectService {
+	private final List<DomainObject> domainObjects;
+	private final DomainObjectRandomGenerator domainObjectRandomGenerator;
 
-	public TestService(TestRandomGenerator testRandomGenerator) {
-		this.testRandomGenerator = testRandomGenerator;
-		tests = testRandomGenerator.generateList(10, 50);
+	public DomainObjectService(DomainObjectRandomGenerator domainObjectRandomGenerator) {
+		this.domainObjectRandomGenerator = domainObjectRandomGenerator;
+		domainObjects = domainObjectRandomGenerator.generateList(10, 50);
 	}
 
-	public List<Test> allTests() {
-		return tests;
+	public List<DomainObject> allDomainObjects() {
+		return domainObjects;
 	}
 
-	public void createTest(Test test) {
-		tests.add(test);
+	public void createDomainObject(DomainObject domainObject) {
+		domainObjects.add(domainObject);
 	}
 
-	public Test createTestParameterFactory() {
-		return testRandomGenerator.generate();
+	public DomainObject createDomainObjectParameterFactory() {
+		return domainObjectRandomGenerator.generate();
 	}
 
 	public void error() {
@@ -53,21 +54,21 @@ public class TestService {
 	}
 
 	@ExecutionMode(mode = ExecutionModeType.EXECUTE_METHOD_DIRECTLY)
-	public Test viewTest(Test test) {
-		return test;
+	public DomainObject viewDomainObject(DomainObject domainObject) {
+		return domainObject;
 	}
 
 	@ExecutionMode(mode = ExecutionModeType.EDIT_PARAMETER_THEN_EXECUTE_METHOD_OR_CANCEL)
-	public void modifyTest(Test test) {
+	public void modifyDomainObject(DomainObject domainObject) {
 	}
 
 	@ExecutionMode(mode = ExecutionModeType.EXECUTE_METHOD_AFTER_CONFORMATION)
-	public void deleteTest(Test test) {
-		tests.remove(test);
+	public void deleteDomainObject(DomainObject domainObject) {
+		domainObjects.remove(domainObject);
 	}
 
-	public int countTest() {
-		return tests.size();
+	public int countDomainObject() {
+		return domainObjects.size();
 	}
 
 	public URI aboutTheDeveloper() {
@@ -78,9 +79,9 @@ public class TestService {
 		}
 	}
 
-	public DownloadStream downloadTestFile() {
-		String text = "This is a test";
-		File file = new File("Test.txt");
+	public DownloadStream downloadDomainObjectFile() {
+		String text = "This is a domainObject";
+		File file = new File("DomainObject.txt");
 		try {
 			InputStream inputStream = new ByteArrayInputStream(text.getBytes("UTF-8"));
 			return new DownloadStream(file, inputStream);
@@ -90,14 +91,14 @@ public class TestService {
 	}
 
 	@ParameterFactory
-	public TestWithHiddenProperties editTestWithHiddenProperties(TestWithHiddenProperties testWithHiddenProperties) {
-		return testWithHiddenProperties;
+	public DomainObjectWithHiddenProperties editDomainObjectWithHiddenProperties(DomainObjectWithHiddenProperties domainObjectWithHiddenProperties) {
+		return domainObjectWithHiddenProperties;
 	}
 
 	@ParameterFactory
-	public TestWithDisabledProperties editTestWithDisabledProperties(
-			TestWithDisabledProperties testWithDisabledProperties) {
-		return testWithDisabledProperties;
+	public DomainObjectWithDisabledProperties editDomainObjectWithDisabledProperties(
+			DomainObjectWithDisabledProperties domainObjectWithDisabledProperties) {
+		return domainObjectWithDisabledProperties;
 	}
 
 }

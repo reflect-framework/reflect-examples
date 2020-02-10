@@ -23,11 +23,11 @@ import nth.reflect.fw.layer5provider.reflection.behavior.order.Order;
  * @author nilsth
  *
  */
-public class TestWithDisabledProperties extends Test {
+public class DomainObjectWithDisabledProperties extends DomainObject {
 
 	@Order(value = 1)
 	@Override
-	public boolean isMyBoolean() {
+	public boolean isMySimpleBoolean() {
 		return super.isMyBoolean();
 		/*
 		 * TODO: BehavioralMethods have the following issue: When a getterMethod
@@ -46,44 +46,44 @@ public class TestWithDisabledProperties extends Test {
 
 	@Override
 	@Disabled
-	public byte getMyByte() {
-		return super.getMyByte();
+	public byte getMySimpleByte() {
+		return super.getMySimpleByte();
 	}
 
 	@Override
 	@Disabled
-	public short getMyShort() {
-		return super.getMyShort();
+	public short getMySimpleShort() {
+		return super.getMySimpleShort();
 	}
 
 	@Override
 	@Disabled
-	public int getMyInt() {
-		return super.getMyInt();
+	public int getMySimpleInt() {
+		return super.getMySimpleInt();
 	}
 
 	@Override
 	@Disabled
-	public long getMyLong() {
-		return super.getMyLong();
+	public long getMySimpleLong() {
+		return super.getMySimpleLong();
 	}
 
 	@Override
 	@Disabled
-	public float getMyFloat() {
-		return super.getMyFloat();
+	public float getMySimpleFloat() {
+		return super.getMySimpleFloat();
 	}
 
 	@Disabled
 	@Override
-	public double getMyDouble() {
-		return super.getMyDouble();
+	public double getMySimpleDouble() {
+		return super.getMySimpleDouble();
 	}
 
 	@Disabled
 	@Override
-	public char getMyChar() {
-		return super.getMyChar();
+	public char getMySimpleChar() {
+		return super.getMySimpleChar();
 	}
 
 	@Disabled
@@ -112,14 +112,14 @@ public class TestWithDisabledProperties extends Test {
 
 	@Disabled
 	@Override
-	public Date getMyTime() {
-		return super.getMyTime();
+	public Date getMyDateWithDateFormat() {
+		return super.getMyDateWithTimeFormat();
 	}
 
 	@Disabled
 	@Override
-	public Date getMyDateTime() {
-		return super.getMyDateTime();
+	public Date getMyDateWithDateTimeFormat() {
+		return super.getMyDateWithDateTimeFormat();
 	}
 
 	@Disabled

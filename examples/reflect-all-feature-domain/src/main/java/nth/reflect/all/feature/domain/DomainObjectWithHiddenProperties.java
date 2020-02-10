@@ -22,7 +22,7 @@ import nth.reflect.fw.layer5provider.reflection.behavior.hidden.Hidden;
  * @author nilsth
  *
  */
-public class TestWithHiddenProperties extends Test {
+public class DomainObjectWithHiddenProperties extends DomainObject {
 
 	public boolean isMyBooleanVisible() {
 		return false;
@@ -30,44 +30,44 @@ public class TestWithHiddenProperties extends Test {
 
 	@Override
 	@Hidden
-	public byte getMyByte() {
-		return super.getMyByte();
+	public byte getMySimpleByte() {
+		return super.getMySimpleByte();
 	}
 
 	@Override
 	@Hidden
-	public short getMyShort() {
-		return super.getMyShort();
+	public short getMySimpleShort() {
+		return super.getMySimpleShort();
 	}
 
 	@Override
 	@Hidden
-	public int getMyInt() {
-		return super.getMyInt();
+	public int getMySimpleInt() {
+		return super.getMySimpleInt();
 	}
 
 	@Override
 	@Hidden
-	public long getMyLong() {
-		return super.getMyLong();
+	public long getMySimpleLong() {
+		return super.getMySimpleLong();
 	}
 
 	@Override
 	@Hidden
-	public float getMyFloat() {
-		return super.getMyFloat();
+	public float getMySimpleFloat() {
+		return super.getMySimpleFloat();
 	}
 
 	@Hidden
 	@Override
-	public double getMyDouble() {
-		return super.getMyDouble();
+	public double getMySimpleDouble() {
+		return super.getMySimpleDouble();
 	}
 
 	@Hidden
 	@Override
-	public char getMyChar() {
-		return super.getMyChar();
+	public char getMySimpleChar() {
+		return super.getMySimpleChar();
 	}
 
 	@Hidden
@@ -96,14 +96,14 @@ public class TestWithHiddenProperties extends Test {
 
 	@Hidden
 	@Override
-	public Date getMyTime() {
-		return super.getMyTime();
+	public Date getMyDateWithTimeFormat() {
+		return super.getMyDateWithTimeFormat();
 	}
 
 	@Hidden
 	@Override
-	public Date getMyDateTime() {
-		return super.getMyDateTime();
+	public Date getMyDateWithDateTimeFormat() {
+		return super.getMyDateWithDateTimeFormat();
 	}
 
 	@Hidden
