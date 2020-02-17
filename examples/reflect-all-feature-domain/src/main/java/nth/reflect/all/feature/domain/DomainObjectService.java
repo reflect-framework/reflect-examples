@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.List;
 
 import nth.reflect.fw.gui.style.fontawesome.FontAwesomeUrl;
@@ -38,6 +39,12 @@ public class DomainObjectService {
 
 	public List<DomainObject> allDomainObjects() {
 		return domainObjects;
+	}
+	
+	public List<DomainObject> allDomainObject() {
+		ArrayList domainObjects2 = new ArrayList();
+				domainObjects2.add(domainObjects.get(0));
+		return domainObjects2;
 	}
 
 	public void createDomainObject(DomainObject domainObject) {

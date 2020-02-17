@@ -108,7 +108,7 @@ public class DomainObjectWithHiddenProperties extends DomainObject {
 
 	@Hidden
 	@Override
-	public PickOrder getMyEnum() {
+	public MyEnum getMyEnum() {
 		return super.getMyEnum();
 	}
 

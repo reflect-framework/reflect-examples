@@ -28,10 +28,10 @@ public class ClassFeature {
 	}
 
 	private static Class<?> getMethodType(ActionMethodInfo actionMethodInfo) {
-		Class<?> returnType = actionMethodInfo.getReturnTypeInfo().getGenericType();
+		Class<?> returnType = actionMethodInfo.getReturnTypeInfo().getArrayOrCollectionTypeInfo().get().getType();
 		if (returnType == Void.TYPE) {
 			// if method is of type void, try to get the type of the parameter
-			Class<?> parameterType = actionMethodInfo.getFirstParameterTypeInfo().getGenericType();
+			Class<?> parameterType = actionMethodInfo.getFirstParameterTypeInfo().getArrayOrCollectionTypeInfo().get().getType();
 			return parameterType;
 		} else {
 			return returnType;

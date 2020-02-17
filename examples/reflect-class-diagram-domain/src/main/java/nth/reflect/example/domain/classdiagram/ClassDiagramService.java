@@ -65,7 +65,7 @@ public class ClassDiagramService {
 
 	private void getReferencedClasses(Class<? extends Object> type, Set<Class<?>> foundClasses) {
 		TypeInfo typeInfo = new TypeInfo(reflectApplication, type, type);
-		if (type != null && !foundClasses.contains(type) && !typeInfo.isJavaVariableType() && !typeInfo.isVoid()) {
+		if (type != null && !foundClasses.contains(type) && !typeInfo.isJavaType() && !typeInfo.isVoid()) {
 			foundClasses.add(type);
 			System.out.println(type.getCanonicalName());
 
@@ -81,11 +81,11 @@ public class ClassDiagramService {
 
 			List<ActionMethodInfo> actionMethodInfos = domainClassInfo.getActionMethodInfosSorted();
 			for (ActionMethodInfo actionMethodInfo : actionMethodInfos) {
-				Class<?> returnType = actionMethodInfo.getReturnTypeInfo().getGenericType();
+				Class<?> returnType = actionMethodInfo.getReturnTypeInfo().getArrayOrCollectionTypeInfo().get().getType();
 				// recursive call
 				getReferencedClasses(returnType, foundClasses);
 
-				Class<?> parameterType = actionMethodInfo.getFirstParameterTypeInfo().getGenericType();
+				Class<?> parameterType = actionMethodInfo.getFirstParameterTypeInfo().getArrayOrCollectionTypeInfo().get().getType();
 				// recursive call
 				getReferencedClasses(parameterType, foundClasses);
 			}

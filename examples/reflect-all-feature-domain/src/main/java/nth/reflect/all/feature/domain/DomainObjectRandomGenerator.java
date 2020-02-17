@@ -3,7 +3,7 @@ package nth.reflect.all.feature.domain;
 import nth.reflect.fw.infrastructure.random.Random;
 import nth.reflect.fw.infrastructure.random.RandomGenerator;
 import nth.reflect.fw.layer3domain.DomainObject;
-import nth.reflect.fw.layer3domain.DomainObject.PickOrder;
+import nth.reflect.fw.layer3domain.DomainObject.MyEnum;
 
 public class DomainObjectRandomGenerator extends RandomGenerator<DomainObject> {
 
@@ -58,7 +58,7 @@ public class DomainObjectRandomGenerator extends RandomGenerator<DomainObject> {
 		domainObject.setMyCalendarWithTimeAnnotation(Random.calendar().generate());
 		domainObject.setMyCalendarWithDateTimeAnnotation(Random.calendar().generate());
 
-		domainObject.setMyEnum((PickOrder) Random.fromEnum(DomainObject.PickOrder.class).generate());
+		domainObject.setMyEnum((MyEnum) Random.fromEnum(DomainObject.MyEnum.class).generate());
 
 		//TODO domainObject.setMyAtomicInteger(Random.in) {
 		//TODO domainObject.setMyAttomicLong(AtomicLong myAttomicLong) {

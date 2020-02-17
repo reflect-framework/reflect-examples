@@ -124,7 +124,7 @@ public class DomainObjectWithDisabledProperties extends DomainObject {
 
 	@Disabled
 	@Override
-	public PickOrder getMyEnum() {
+	public MyEnum getMyEnum() {
 		return super.getMyEnum();
 	}
 
