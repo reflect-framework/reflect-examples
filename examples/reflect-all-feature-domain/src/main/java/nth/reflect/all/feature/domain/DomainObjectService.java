@@ -17,6 +17,7 @@ import nth.reflect.fw.layer3domain.DomainObject;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionMode;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionModeType;
 import nth.reflect.fw.layer5provider.reflection.behavior.fonticon.FontIcon;
+import nth.reflect.fw.layer5provider.reflection.behavior.order.Order;
 import nth.reflect.fw.layer5provider.reflection.behavior.parameterfactory.ParameterFactory;
 import nth.reflect.fw.layer5provider.reflection.info.actionmethod.ActionMethod;
 
@@ -37,16 +38,12 @@ public class DomainObjectService {
 		domainObjects = domainObjectRandomGenerator.generateList(10, 50);
 	}
 
+	@Order(10)
 	public List<DomainObject> allDomainObjects() {
 		return domainObjects;
 	}
 	
-	public List<DomainObject> allDomainObject() {
-		ArrayList domainObjects2 = new ArrayList();
-				domainObjects2.add(domainObjects.get(0));
-		return domainObjects2;
-	}
-
+	@Order(20)
 	public void createDomainObject(DomainObject domainObject) {
 		domainObjects.add(domainObject);
 	}
@@ -55,10 +52,6 @@ public class DomainObjectService {
 		return domainObjectRandomGenerator.generate();
 	}
 
-	public void error() {
-		String message = Random.chapter().generateString(10);
-		throw new RuntimeException(message);
-	}
 
 	@ExecutionMode(mode = ExecutionModeType.EXECUTE_METHOD_DIRECTLY)
 	public DomainObject viewDomainObject(DomainObject domainObject) {
@@ -73,11 +66,19 @@ public class DomainObjectService {
 	public void deleteDomainObject(DomainObject domainObject) {
 		domainObjects.remove(domainObject);
 	}
-
+	
+	@Order(50)	
 	public int countDomainObject() {
 		return domainObjects.size();
 	}
 
+	@Order(60)
+	public void error() {
+		String message = Random.chapter().generateString(10);
+		throw new RuntimeException(message);
+	}
+
+	@Order(70)
 	public URI aboutTheDeveloper() {
 		try {
 			return new URI("http://www.linkedin.com/pub/nils-ten-hoeve/a/4b4/915");
@@ -86,6 +87,7 @@ public class DomainObjectService {
 		}
 	}
 
+	@Order(80)
 	public DownloadStream downloadDomainObjectFile() {
 		String text = "This is a domainObject";
 		File file = new File("DomainObject.txt");
@@ -97,11 +99,15 @@ public class DomainObjectService {
 		}
 	}
 
+
+	@Order(80)
 	@ParameterFactory
 	public DomainObjectWithHiddenProperties editDomainObjectWithHiddenProperties(DomainObjectWithHiddenProperties domainObjectWithHiddenProperties) {
 		return domainObjectWithHiddenProperties;
 	}
 
+
+	@Order(90)
 	@ParameterFactory
 	public DomainObjectWithDisabledProperties editDomainObjectWithDisabledProperties(
 			DomainObjectWithDisabledProperties domainObjectWithDisabledProperties) {
