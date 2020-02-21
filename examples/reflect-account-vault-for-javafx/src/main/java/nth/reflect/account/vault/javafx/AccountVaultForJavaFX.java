@@ -2,10 +2,10 @@ package nth.reflect.account.vault.javafx;
 
 import java.util.List;
 
-import nth.reflect.account.vault.domain.AccountVaultColors;
+import nth.reflect.account.vault.domain.AccountVaultColorProvider;
 import nth.reflect.account.vault.domain.AccountVaultInfrastructureClasses;
 import nth.reflect.account.vault.domain.AccountVaultServiceClasses;
-import nth.reflect.fw.gui.style.ReflectColors;
+import nth.reflect.fw.gui.style.ColorProvider;
 import nth.reflect.fw.javafx.ReflectApplicationForJavaFX;
 import nth.reflect.fw.layer5provider.reflection.behavior.displayname.DisplayName;
 
@@ -27,8 +27,8 @@ public class AccountVaultForJavaFX extends ReflectApplicationForJavaFX {
 	}
 
 	@Override
-	public ReflectColors getColors() {
-		return AccountVaultColors.get();
+	public ColorProvider getColorProvider() {
+		return AccountVaultColorProvider.get();
 	}
 
 }

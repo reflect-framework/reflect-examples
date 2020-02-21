@@ -2,11 +2,11 @@ package nth.reflect.web.shop.javafx;
 
 import java.util.List;
 
-import com.acme.web.shop.WebShopColors;
+import com.acme.web.shop.WebShopColorProvider;
 import com.acme.web.shop.WebShopInfrastructureClasses;
 import com.acme.web.shop.WebShopServiceClasses;
 
-import nth.reflect.fw.gui.style.ReflectColors;
+import nth.reflect.fw.gui.style.ColorProvider;
 import nth.reflect.fw.javafx.ReflectApplicationForJavaFX;
 import nth.reflect.fw.layer5provider.reflection.behavior.description.Description;
 import nth.reflect.fw.layer5provider.reflection.behavior.displayname.DisplayName;
@@ -30,8 +30,8 @@ public class WebShopForJavaFX extends ReflectApplicationForJavaFX {
 	}
 
 	@Override
-	public ReflectColors getColors() {
-		return WebShopColors.get();
+	public ColorProvider getColorProvider() {
+		return WebShopColorProvider.get();
 	}
 
 }

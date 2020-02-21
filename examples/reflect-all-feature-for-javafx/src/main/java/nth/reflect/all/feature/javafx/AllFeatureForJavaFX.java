@@ -2,10 +2,10 @@ package nth.reflect.all.feature.javafx;
 
 import java.util.List;
 
-import nth.reflect.all.feature.AllFeatureColors;
+import nth.reflect.all.feature.AllFeatureColorProvider;
 import nth.reflect.all.feature.AllFeatureInfrastructureClasses;
 import nth.reflect.all.feature.AllFeatureServiceClasses;
-import nth.reflect.fw.gui.style.ReflectColors;
+import nth.reflect.fw.gui.style.ColorProvider;
 import nth.reflect.fw.javafx.ReflectApplicationForJavaFX;
 import nth.reflect.fw.layer5provider.reflection.behavior.displayname.DisplayName;
 
@@ -27,8 +27,8 @@ public class AllFeatureForJavaFX extends ReflectApplicationForJavaFX {
 	}
 
 	@Override
-	public ReflectColors getColors() {
-		return AllFeatureColors.get();
+	public ColorProvider getColorProvider() {
+		return AllFeatureColorProvider.get();
 	}
 
 }

@@ -2,10 +2,10 @@ package nth.reflect.all.feature.swing;
 
 import java.util.List;
 
-import nth.reflect.all.feature.AllFeatureColors;
+import nth.reflect.all.feature.AllFeatureColorProvider;
 import nth.reflect.all.feature.AllFeatureInfrastructureClasses;
 import nth.reflect.all.feature.AllFeatureServiceClasses;
-import nth.reflect.fw.gui.style.ReflectColors;
+import nth.reflect.fw.gui.style.ColorProvider;
 import nth.reflect.fw.ui.swing.ReflecttApplicationForSwing;
 
 public class AllFeatureForSwing extends ReflecttApplicationForSwing {
@@ -25,8 +25,8 @@ public class AllFeatureForSwing extends ReflecttApplicationForSwing {
 	}
 
 	@Override
-	public ReflectColors getColors() {
-		return AllFeatureColors.get();
+	public ColorProvider getColorProvider() {
+		return AllFeatureColorProvider.get();
 	}
 
 }
