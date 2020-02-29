@@ -27,7 +27,7 @@ public class DomainObjectWithDisabledProperties extends DomainObject {
 
 	@Order(value = 1)
 	@Override
-	public boolean isMySimpleBoolean() {
+	public boolean isMyPrimitiveBoolean() {
 		return super.isMyBoolean();
 		/*
 		 * TODO: BehavioralMethods have the following issue: When a getterMethod
@@ -46,44 +46,44 @@ public class DomainObjectWithDisabledProperties extends DomainObject {
 
 	@Override
 	@Disabled
-	public byte getMySimpleByte() {
-		return super.getMySimpleByte();
+	public byte getMyPrimitiveByte() {
+		return super.getMyPrimitiveByte();
 	}
 
 	@Override
 	@Disabled
-	public short getMySimpleShort() {
-		return super.getMySimpleShort();
+	public short getMyPrimitiveShort() {
+		return super.getMyPrimitiveShort();
 	}
 
 	@Override
 	@Disabled
-	public int getMySimpleInt() {
-		return super.getMySimpleInt();
+	public int getMyPrimitiveInt() {
+		return super.getMyPrimitiveInt();
 	}
 
 	@Override
 	@Disabled
-	public long getMySimpleLong() {
-		return super.getMySimpleLong();
+	public long getMyPrimitiveLong() {
+		return super.getMyPrimitiveLong();
 	}
 
 	@Override
 	@Disabled
-	public float getMySimpleFloat() {
-		return super.getMySimpleFloat();
+	public float getMyPrimitiveFloat() {
+		return super.getMyPrimitiveFloat();
 	}
 
 	@Disabled
 	@Override
-	public double getMySimpleDouble() {
-		return super.getMySimpleDouble();
+	public double getMyPrimitiveDouble() {
+		return super.getMyPrimitiveDouble();
 	}
 
 	@Disabled
 	@Override
-	public char getMySimpleChar() {
-		return super.getMySimpleChar();
+	public char getMyPrimitiveChar() {
+		return super.getMyPrimitiveChar();
 	}
 
 	@Disabled

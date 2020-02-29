@@ -10,28 +10,28 @@ public class DomainObjectRandomGenerator extends RandomGenerator<DomainObject> {
 	@Override
 	public DomainObject generate() {
 		DomainObject domainObject = new DomainObject();
-		domainObject.setMySimpleBoolean(Random.bool().generate());
+		domainObject.setMyPrimitiveBoolean(Random.bool().generate());
 		domainObject.setMyBoolean(Random.bool().generate());
 
-		domainObject.setMySimpleByte(Random.byte_().generate());
+		domainObject.setMyPrimitiveByte(Random.byte_().generate());
 		domainObject.setMyByte(Random.byte_().generate());
 
-		domainObject.setMySimpleChar(Random.character().generate());
+		domainObject.setMyPrimitiveChar(Random.character().generate());
 		domainObject.setMyCharacter(Random.character().generate());
 
-		domainObject.setMySimpleDouble(Random.double_().generate());
+		domainObject.setMyPrimitiveDouble(Random.double_().generate());
 		domainObject.setMyDouble(Random.double_().generate());
 
-		domainObject.setMySimpleFloat(Random.float_().generate());
+		domainObject.setMyPrimitiveFloat(Random.float_().generate());
 		domainObject.setMyFloat(Random.float_().generate());
 
-		domainObject.setMySimpleInt(Random.integer().generate());
+		domainObject.setMyPrimitiveInt(Random.integer().generate());
 		domainObject.setMyInteger(Random.integer().generate());
 
-		domainObject.setMySimpleLong(Random.long_().generate());
+		domainObject.setMyPrimitiveLong(Random.long_().generate());
 		domainObject.setMyLong(Random.long_().generate());
 
-		domainObject.setMySimpleShort(Random.short_().generate());
+		domainObject.setMyPrimitiveShort(Random.short_().generate());
 		domainObject.setMyShort(Random.short_().generate());
 
 		domainObject.setMyText(Random.sentence().generate());

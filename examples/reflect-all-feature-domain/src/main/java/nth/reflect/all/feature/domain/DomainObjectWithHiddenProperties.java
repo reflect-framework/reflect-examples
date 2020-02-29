@@ -30,44 +30,44 @@ public class DomainObjectWithHiddenProperties extends DomainObject {
 
 	@Override
 	@Hidden
-	public byte getMySimpleByte() {
-		return super.getMySimpleByte();
+	public byte getMyPrimitiveByte() {
+		return super.getMyPrimitiveByte();
 	}
 
 	@Override
 	@Hidden
-	public short getMySimpleShort() {
-		return super.getMySimpleShort();
+	public short getMyPrimitiveShort() {
+		return super.getMyPrimitiveShort();
 	}
 
 	@Override
 	@Hidden
-	public int getMySimpleInt() {
-		return super.getMySimpleInt();
+	public int getMyPrimitiveInt() {
+		return super.getMyPrimitiveInt();
 	}
 
 	@Override
 	@Hidden
-	public long getMySimpleLong() {
-		return super.getMySimpleLong();
+	public long getMyPrimitiveLong() {
+		return super.getMyPrimitiveLong();
 	}
 
 	@Override
 	@Hidden
-	public float getMySimpleFloat() {
-		return super.getMySimpleFloat();
+	public float getMyPrimitiveFloat() {
+		return super.getMyPrimitiveFloat();
 	}
 
 	@Hidden
 	@Override
-	public double getMySimpleDouble() {
-		return super.getMySimpleDouble();
+	public double getMyPrimitiveDouble() {
+		return super.getMyPrimitiveDouble();
 	}
 
 	@Hidden
 	@Override
-	public char getMySimpleChar() {
-		return super.getMySimpleChar();
+	public char getMyPrimitiveChar() {
+		return super.getMyPrimitiveChar();
 	}
 
 	@Hidden
