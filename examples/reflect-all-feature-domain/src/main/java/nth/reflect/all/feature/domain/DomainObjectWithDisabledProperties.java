@@ -7,8 +7,6 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
 
 import nth.reflect.fw.layer3domain.DomainObject;
 import nth.reflect.fw.layer3domain.DomainObjectProperty;
@@ -30,13 +28,12 @@ public class DomainObjectWithDisabledProperties extends DomainObject {
 	public boolean isMyPrimitiveBoolean() {
 		return super.isMyBoolean();
 		/*
-		 * TODO: BehavioralMethods have the following issue: When a getterMethod
-		 * is in a super class and the BehavioralMethod is in a subclass it wont
-		 * find the BehavioralMethod because the findFor(Method method) will use
-		 * the declaringClass of the method to find the BehavioralMethod. This
-		 * can be solved by overriding the getterMethod in the subclass but this
-		 * is not so obvious. Better solution would be if pass the ownerClass as
-		 * a parameter.
+		 * TODO: BehavioralMethods have the following issue: When a getterMethod is in a
+		 * super class and the BehavioralMethod is in a subclass it wont find the
+		 * BehavioralMethod because the findFor(Method method) will use the
+		 * declaringClass of the method to find the BehavioralMethod. This can be solved
+		 * by overriding the getterMethod in the subclass but this is not so obvious.
+		 * Better solution would be if pass the ownerClass as a parameter.
 		 */
 	}
 
@@ -132,18 +129,6 @@ public class DomainObjectWithDisabledProperties extends DomainObject {
 	@Override
 	public Calendar getMyCalendar() {
 		return super.getMyCalendar();
-	}
-
-	@Disabled
-	@Override
-	public AtomicInteger getMyAtomicInteger() {
-		return super.getMyAtomicInteger();
-	}
-
-	@Disabled
-	@Override
-	public AtomicLong getMyAttomicLong() {
-		return super.getMyAttomicLong();
 	}
 
 	@Disabled

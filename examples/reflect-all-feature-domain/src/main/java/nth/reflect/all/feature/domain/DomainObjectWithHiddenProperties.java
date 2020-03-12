@@ -7,8 +7,6 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicLong;
 
 import nth.reflect.fw.layer3domain.DomainObject;
 import nth.reflect.fw.layer3domain.DomainObjectProperty;
@@ -116,18 +114,6 @@ public class DomainObjectWithHiddenProperties extends DomainObject {
 	@Override
 	public Calendar getMyCalendar() {
 		return super.getMyCalendar();
-	}
-
-	@Hidden
-	@Override
-	public AtomicInteger getMyAtomicInteger() {
-		return super.getMyAtomicInteger();
-	}
-
-	@Hidden
-	@Override
-	public AtomicLong getMyAttomicLong() {
-		return super.getMyAttomicLong();
 	}
 
 	@Hidden
