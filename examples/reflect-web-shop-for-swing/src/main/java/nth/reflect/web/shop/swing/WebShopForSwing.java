@@ -9,11 +9,11 @@ import com.acme.web.shop.WebShopServiceClasses;
 import nth.reflect.fw.gui.style.ColorProvider;
 import nth.reflect.fw.layer5provider.reflection.behavior.description.Description;
 import nth.reflect.fw.layer5provider.reflection.behavior.displayname.DisplayName;
-import nth.reflect.fw.ui.swing.ReflecttApplicationForSwing;
+import nth.reflect.fw.ui.swing.ReflectApplicationForSwing;
 
 @DisplayName(englishName = "ACME Web Shop")
 @Description(englishDescription = "ACME Web Shop for everything you need...")
-public class WebShopForSwing extends ReflecttApplicationForSwing {
+public class WebShopForSwing extends ReflectApplicationForSwing {
 
 	public static void main(String[] commandLineArguments) {
 		launch();
