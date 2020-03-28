@@ -5,7 +5,7 @@ import nth.reflect.fw.layer5provider.reflection.behavior.displayname.DisplayName
 import nth.reflect.fw.layer5provider.reflection.behavior.fonticon.FontIcon;
 
 @FontIcon(fontIconUrl=FontAwesomeUrl.SHOPPING_CART )
-@DisplayName(englishName="Shopping cart")
+@DisplayName(defaultEnglish="Shopping cart")
 public class ShoppingCartService {
 
 	@FontIcon(fontIconUrl=FontAwesomeUrl.PAYPAL)

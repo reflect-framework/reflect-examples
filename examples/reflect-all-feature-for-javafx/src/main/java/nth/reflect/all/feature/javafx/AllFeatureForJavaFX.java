@@ -9,7 +9,7 @@ import nth.reflect.fw.gui.style.ColorProvider;
 import nth.reflect.fw.javafx.ReflectApplicationForJavaFX;
 import nth.reflect.fw.layer5provider.reflection.behavior.displayname.DisplayName;
 
-@DisplayName(englishName = "Reflect for JavaFX Demo")
+@DisplayName(defaultEnglish = "Reflect for JavaFX Demo")
 public class AllFeatureForJavaFX extends ReflectApplicationForJavaFX {
 
 	public static void main(String[] args) {

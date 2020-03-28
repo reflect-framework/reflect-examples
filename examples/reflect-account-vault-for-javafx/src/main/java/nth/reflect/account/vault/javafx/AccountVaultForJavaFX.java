@@ -9,7 +9,7 @@ import nth.reflect.fw.gui.style.ColorProvider;
 import nth.reflect.fw.javafx.ReflectApplicationForJavaFX;
 import nth.reflect.fw.layer5provider.reflection.behavior.displayname.DisplayName;
 
-@DisplayName(englishName = "Account Vault")
+@DisplayName(defaultEnglish = "Account Vault")
 public class AccountVaultForJavaFX extends ReflectApplicationForJavaFX {
 
 	public static void main(String[] args) {

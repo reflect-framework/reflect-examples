@@ -11,8 +11,8 @@ import nth.reflect.fw.layer5provider.reflection.behavior.description.Description
 import nth.reflect.fw.layer5provider.reflection.behavior.displayname.DisplayName;
 import nth.reflect.fw.ui.swing.ReflectApplicationForSwing;
 
-@DisplayName(englishName = "ACME Web Shop")
-@Description(englishDescription = "ACME Web Shop for everything you need...")
+@DisplayName(defaultEnglish = "ACME Web Shop")
+@Description(defaultEnglish = "ACME Web Shop for everything you need...")
 public class WebShopForSwing extends ReflectApplicationForSwing {
 
 	public static void main(String[] commandLineArguments) {
