@@ -20,4 +20,14 @@
 			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.github.reflect-framework</groupId>
+				<version>0.0.2-SNAPSHOT</version>
+				<artifactId>reflect-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>
