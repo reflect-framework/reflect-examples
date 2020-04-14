@@ -10,6 +10,8 @@ import java.util.Date;
 
 import nth.reflect.fw.layer3domain.DomainObject;
 import nth.reflect.fw.layer3domain.DomainObjectProperty;
+import nth.reflect.fw.layer3domain.FullFeatureDomainObject;
+import nth.reflect.fw.layer3domain.FullFeatureDomainObject.MyEnum;
 import nth.reflect.fw.layer5provider.reflection.behavior.hidden.Hidden;
 
 /**
@@ -20,7 +22,7 @@ import nth.reflect.fw.layer5provider.reflection.behavior.hidden.Hidden;
  * @author nilsth
  *
  */
-public class DomainObjectWithHiddenProperties extends DomainObject {
+public class DomainObjectWithHiddenProperties extends FullFeatureDomainObject {
 
 	public boolean isMyBooleanVisible() {
 		return false;
