@@ -8,11 +8,10 @@ import java.nio.file.Paths;
 
 import nth.reflect.fw.infrastructure.random.Random;
 import nth.reflect.fw.infrastructure.random.RandomGenerator;
-import nth.reflect.fw.layer3domain.DomainObject;
 import nth.reflect.fw.layer3domain.FullFeatureDomainObject;
 import nth.reflect.fw.layer3domain.FullFeatureDomainObject.MyEnum;
 
-public class DomainObjectRandomGenerator extends RandomGenerator<DomainObject> {
+public class DomainObjectRandomGenerator extends RandomGenerator<FullFeatureDomainObject> {
 
 	@Override
 	public FullFeatureDomainObject generate() {

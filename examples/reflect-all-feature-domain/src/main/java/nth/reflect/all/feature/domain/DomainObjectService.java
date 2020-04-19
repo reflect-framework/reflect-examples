@@ -13,6 +13,7 @@ import nth.reflect.fw.infrastructure.random.Random;
 import nth.reflect.fw.layer1userinterface.controller.DownloadStream;
 import nth.reflect.fw.layer2service.ServiceObject;
 import nth.reflect.fw.layer3domain.DomainObject;
+import nth.reflect.fw.layer3domain.FullFeatureDomainObject;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionMode;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionModeType;
 import nth.reflect.fw.layer5provider.reflection.behavior.fonticon.FontIcon;
@@ -21,7 +22,8 @@ import nth.reflect.fw.layer5provider.reflection.behavior.parameterfactory.Parame
 import nth.reflect.fw.layer5provider.reflection.info.actionmethod.ActionMethod;
 
 /**
- * {@link ServiceObject} class to domainObject all the supported {@link ActionMethod}s.
+ * {@link ServiceObject} class to domainObject all the supported
+ * {@link ActionMethod}s.
  * 
  * @author nilsth
  *
@@ -29,7 +31,7 @@ import nth.reflect.fw.layer5provider.reflection.info.actionmethod.ActionMethod;
 @FontIcon(fontIconUrl = FontAwesomeUrl.CHECK)
 
 public class DomainObjectService {
-	private final List<DomainObject> domainObjects;
+	private final List<FullFeatureDomainObject> domainObjects;
 	private final DomainObjectRandomGenerator domainObjectRandomGenerator;
 
 	public DomainObjectService(DomainObjectRandomGenerator domainObjectRandomGenerator) {
@@ -38,19 +40,23 @@ public class DomainObjectService {
 	}
 
 	@Order(10)
-	public List<DomainObject> allDomainObjects() {
+	public List<FullFeatureDomainObject> allDomainObjects() {
 		return domainObjects;
 	}
-	
+
+	@Order(15)
+	public void noReturnValue() {
+		// do Nothing, GUI will show pop up that method is executed
+	}
+
 	@Order(20)
-	public void createDomainObject(DomainObject domainObject) {
+	public void createDomainObject(FullFeatureDomainObject domainObject) {
 		domainObjects.add(domainObject);
 	}
 
 	public DomainObject createDomainObjectParameterFactory() {
 		return domainObjectRandomGenerator.generate();
 	}
-
 
 	@ExecutionMode(mode = ExecutionModeType.EXECUTE_METHOD_DIRECTLY)
 	public DomainObject viewDomainObject(DomainObject domainObject) {
@@ -65,8 +71,8 @@ public class DomainObjectService {
 	public void deleteDomainObject(DomainObject domainObject) {
 		domainObjects.remove(domainObject);
 	}
-	
-	@Order(50)	
+
+	@Order(50)
 	public int countDomainObject() {
 		return domainObjects.size();
 	}
@@ -98,13 +104,12 @@ public class DomainObjectService {
 		}
 	}
 
-
 	@Order(80)
 	@ParameterFactory
-	public DomainObjectWithHiddenProperties editDomainObjectWithHiddenProperties(DomainObjectWithHiddenProperties domainObjectWithHiddenProperties) {
+	public DomainObjectWithHiddenProperties editDomainObjectWithHiddenProperties(
+			DomainObjectWithHiddenProperties domainObjectWithHiddenProperties) {
 		return domainObjectWithHiddenProperties;
 	}
-
 
 	@Order(90)
 	@ParameterFactory
