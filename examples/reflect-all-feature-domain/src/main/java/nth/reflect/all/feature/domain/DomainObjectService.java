@@ -40,13 +40,18 @@ public class DomainObjectService {
 	}
 
 	@Order(10)
-	public List<FullFeatureDomainObject> allDomainObjects() {
-		return domainObjects;
-	}
-
-	@Order(15)
 	public void noReturnValue() {
 		// do Nothing, GUI will show pop up that method is executed
+	}
+
+	@Order(12)
+	public FullFeatureDomainObject viewDomainObject() {
+		return domainObjects.get(0);
+	}
+
+	@Order(10)
+	public List<FullFeatureDomainObject> allDomainObjects() {
+		return domainObjects;
 	}
 
 	@Order(20)
