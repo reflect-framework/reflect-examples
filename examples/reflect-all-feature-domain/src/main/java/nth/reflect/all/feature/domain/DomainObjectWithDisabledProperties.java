@@ -10,8 +10,8 @@ import java.util.Date;
 
 import nth.reflect.fw.layer3domain.DomainObject;
 import nth.reflect.fw.layer3domain.DomainObjectProperty;
-import nth.reflect.fw.layer3domain.FullFeatureDomainObject;
-import nth.reflect.fw.layer3domain.FullFeatureDomainObject.MyEnum;
+import nth.reflect.fw.layer3domain.AllFeatureDomainObject;
+import nth.reflect.fw.layer3domain.AllFeatureDomainObject.MyEnum;
 import nth.reflect.fw.layer5provider.reflection.behavior.disabled.Disabled;
 import nth.reflect.fw.layer5provider.reflection.behavior.order.Order;
 
@@ -23,7 +23,7 @@ import nth.reflect.fw.layer5provider.reflection.behavior.order.Order;
  * @author nilsth
  *
  */
-public class DomainObjectWithDisabledProperties extends FullFeatureDomainObject {
+public class DomainObjectWithDisabledProperties extends AllFeatureDomainObject {
 
 	@Order(value = 1)
 	@Override

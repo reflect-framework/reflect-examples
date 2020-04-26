@@ -8,14 +8,14 @@ import java.nio.file.Paths;
 
 import nth.reflect.fw.infrastructure.random.Random;
 import nth.reflect.fw.infrastructure.random.RandomGenerator;
-import nth.reflect.fw.layer3domain.FullFeatureDomainObject;
-import nth.reflect.fw.layer3domain.FullFeatureDomainObject.MyEnum;
+import nth.reflect.fw.layer3domain.AllFeatureDomainObject;
+import nth.reflect.fw.layer3domain.AllFeatureDomainObject.MyEnum;
 
-public class DomainObjectRandomGenerator extends RandomGenerator<FullFeatureDomainObject> {
+public class DomainObjectRandomGenerator extends RandomGenerator<AllFeatureDomainObject> {
 
 	@Override
-	public FullFeatureDomainObject generate() {
-		FullFeatureDomainObject domainObject = new FullFeatureDomainObject();
+	public AllFeatureDomainObject generate() {
+		AllFeatureDomainObject domainObject = new AllFeatureDomainObject();
 		// Numbers
 		domainObject.setMyBigDecimal(Random.bigDecimal().generate());
 		domainObject.setMyBigInteger(Random.bigInteger().generate());
@@ -84,7 +84,7 @@ public class DomainObjectRandomGenerator extends RandomGenerator<FullFeatureDoma
 		domainObject.setMyCalendarWithDateTimeAnnotation(Random.calendar().generate());
 
 		// Domain Type
-		domainObject.setMyEnum((MyEnum) Random.fromEnum(FullFeatureDomainObject.MyEnum.class).generate());
+		domainObject.setMyEnum((MyEnum) Random.fromEnum(AllFeatureDomainObject.MyEnum.class).generate());
 		domainObject.setMyDomainObject(domainObject);
 
 		return domainObject;

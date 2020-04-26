@@ -13,7 +13,7 @@ import nth.reflect.fw.infrastructure.random.Random;
 import nth.reflect.fw.layer1userinterface.controller.DownloadStream;
 import nth.reflect.fw.layer2service.ServiceObject;
 import nth.reflect.fw.layer3domain.DomainObject;
-import nth.reflect.fw.layer3domain.FullFeatureDomainObject;
+import nth.reflect.fw.layer3domain.AllFeatureDomainObject;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionMode;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionModeType;
 import nth.reflect.fw.layer5provider.reflection.behavior.fonticon.FontIcon;
@@ -31,7 +31,7 @@ import nth.reflect.fw.layer5provider.reflection.info.actionmethod.ActionMethod;
 @FontIcon(fontIconUrl = FontAwesomeUrl.CHECK)
 
 public class DomainObjectService {
-	private final List<FullFeatureDomainObject> domainObjects;
+	private final List<AllFeatureDomainObject> domainObjects;
 	private final DomainObjectRandomGenerator domainObjectRandomGenerator;
 
 	public DomainObjectService(DomainObjectRandomGenerator domainObjectRandomGenerator) {
@@ -45,17 +45,17 @@ public class DomainObjectService {
 	}
 
 	@Order(12)
-	public FullFeatureDomainObject viewDomainObject() {
+	public AllFeatureDomainObject viewDomainObject() {
 		return domainObjects.get(0);
 	}
 
 	@Order(10)
-	public List<FullFeatureDomainObject> allDomainObjects() {
+	public List<AllFeatureDomainObject> allDomainObjects() {
 		return domainObjects;
 	}
 
 	@Order(20)
-	public void createDomainObject(FullFeatureDomainObject domainObject) {
+	public void createDomainObject(AllFeatureDomainObject domainObject) {
 		domainObjects.add(domainObject);
 	}
 
