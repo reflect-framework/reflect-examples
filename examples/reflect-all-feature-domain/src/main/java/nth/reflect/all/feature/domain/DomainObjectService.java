@@ -12,8 +12,8 @@ import nth.reflect.fw.gui.style.fontawesome.FontAwesomeUrl;
 import nth.reflect.fw.infrastructure.random.Random;
 import nth.reflect.fw.layer1userinterface.controller.DownloadStream;
 import nth.reflect.fw.layer2service.ServiceObject;
-import nth.reflect.fw.layer3domain.DomainObject;
 import nth.reflect.fw.layer3domain.AllFeatureDomainObject;
+import nth.reflect.fw.layer3domain.DomainObject;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionMode;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionModeType;
 import nth.reflect.fw.layer5provider.reflection.behavior.fonticon.FontIcon;
@@ -49,7 +49,7 @@ public class DomainObjectService {
 		return domainObjects.get(0);
 	}
 
-	@Order(10)
+	@Order(15)
 	public List<AllFeatureDomainObject> allDomainObjects() {
 		return domainObjects;
 	}
@@ -63,32 +63,41 @@ public class DomainObjectService {
 		return domainObjectRandomGenerator.generate();
 	}
 
+	@Order(30)
 	@ExecutionMode(mode = ExecutionModeType.EXECUTE_METHOD_DIRECTLY)
 	public DomainObject viewDomainObject(DomainObject domainObject) {
 		return domainObject;
 	}
 
+	@Order(40)
 	@ExecutionMode(mode = ExecutionModeType.EDIT_PARAMETER_THEN_EXECUTE_METHOD_OR_CANCEL)
 	public void modifyDomainObject(DomainObject domainObject) {
 	}
 
+	@Order(50)
 	@ExecutionMode(mode = ExecutionModeType.EXECUTE_METHOD_AFTER_CONFORMATION)
 	public void deleteDomainObject(DomainObject domainObject) {
 		domainObjects.remove(domainObject);
 	}
 
-	@Order(50)
+	@Order(60)
 	public int countDomainObject() {
 		return domainObjects.size();
 	}
 
-	@Order(60)
+	@Order(65)
+	public String help() {
+		String longHelpText = Random.chapter().generateString(10);
+		return longHelpText;
+	}
+
+	@Order(70)
 	public void error() {
 		String message = Random.chapter().generateString(10);
 		throw new RuntimeException(message);
 	}
 
-	@Order(70)
+	@Order(80)
 	public URI aboutTheDeveloper() {
 		try {
 			return new URI("http://www.linkedin.com/pub/nils-ten-hoeve/a/4b4/915");
@@ -97,7 +106,7 @@ public class DomainObjectService {
 		}
 	}
 
-	@Order(80)
+	@Order(90)
 	public DownloadStream downloadDomainObjectFile() {
 		String text = "This is a domainObject";
 		File file = new File("DomainObject.txt");
@@ -109,14 +118,14 @@ public class DomainObjectService {
 		}
 	}
 
-	@Order(80)
+	@Order(100)
 	@ParameterFactory
 	public DomainObjectWithHiddenProperties editDomainObjectWithHiddenProperties(
 			DomainObjectWithHiddenProperties domainObjectWithHiddenProperties) {
 		return domainObjectWithHiddenProperties;
 	}
 
-	@Order(90)
+	@Order(110)
 	@ParameterFactory
 	public DomainObjectWithDisabledProperties editDomainObjectWithDisabledProperties(
 			DomainObjectWithDisabledProperties domainObjectWithDisabledProperties) {
