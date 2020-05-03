@@ -12,7 +12,7 @@ import nth.reflect.fw.layer5provider.reflection.behavior.format.Format;
  *
  */
 
-public class AllFeartureDomainObject {
+public class AllFeatureDomainObject {
 	private boolean myBoolean;
 //	private AllFeartureDomainObject myTest;
 	private byte myByte;

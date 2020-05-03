@@ -10,7 +10,6 @@ import java.util.List;
 
 import nth.reflect.fw.gui.style.fontawesome.FontAwesomeUrl;
 import nth.reflect.fw.infrastructure.random.Random;
-import nth.reflect.fw.layer1userinterface.controller.DownloadStream;
 import nth.reflect.fw.layer2service.ServiceObject;
 import nth.reflect.fw.layer3domain.AllFeatureDomainObject;
 import nth.reflect.fw.layer3domain.DomainObject;
@@ -20,6 +19,7 @@ import nth.reflect.fw.layer5provider.reflection.behavior.fonticon.FontIcon;
 import nth.reflect.fw.layer5provider.reflection.behavior.order.Order;
 import nth.reflect.fw.layer5provider.reflection.behavior.parameterfactory.ParameterFactory;
 import nth.reflect.fw.layer5provider.reflection.info.actionmethod.ActionMethod;
+import nth.reflect.fw.stream.DownloadStream;
 
 /**
  * {@link ServiceObject} class to domainObject all the supported

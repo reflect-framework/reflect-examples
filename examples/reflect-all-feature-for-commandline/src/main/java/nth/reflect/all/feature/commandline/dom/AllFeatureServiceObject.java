@@ -10,21 +10,25 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import nth.reflect.fw.layer1userinterface.controller.DownloadStream;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionMode;
 import nth.reflect.fw.layer5provider.reflection.behavior.executionmode.ExecutionModeType;
+import nth.reflect.fw.stream.DownloadStream;
+
 /**
- * Note that this class is derived form the TestsService class in the ReflectTestDomain project<br>
- * It is simplified so it is suited for the command line user interface (Which is limited in functionality) 
+ * Note that this class is derived form the TestsService class in the
+ * ReflectTestDomain project<br>
+ * It is simplified so it is suited for the command line user interface (Which
+ * is limited in functionality)
+ * 
  * @author nilsth
  *
  */
 public class AllFeatureServiceObject {
 
-	private List<AllFeartureDomainObject> allTypes;
+	private List<AllFeatureDomainObject> allTypes;
 
 	public AllFeatureServiceObject() {
-		AllFeartureDomainObject allType = new AllFeartureDomainObject();
+		AllFeatureDomainObject allType = new AllFeatureDomainObject();
 		allType.setMyBoolean(true);
 		allType.setMyByte((byte) 1);
 		allType.setMyChar('z');
@@ -41,40 +45,40 @@ public class AllFeatureServiceObject {
 		// test.setMyTime(new Date());
 		allType.setMyDateTime(new Date());
 
-		allTypes = new ArrayList<AllFeartureDomainObject>();
+		allTypes = new ArrayList<AllFeatureDomainObject>();
 		allTypes.add(allType);
 	}
 
-	public List<AllFeartureDomainObject> allTests() {
+	public List<AllFeatureDomainObject> allTests() {
 		return allTypes;
 	}
 
-	public void createTest(AllFeartureDomainObject allType) {
+	public void createTest(AllFeatureDomainObject allType) {
 		allTypes.add(allType);
 	}
 
-	public AllFeartureDomainObject createTestParameterFactory() {
-		return new AllFeartureDomainObject();
+	public AllFeatureDomainObject createTestParameterFactory() {
+		return new AllFeatureDomainObject();
 	}
 
 	@ExecutionMode(mode = ExecutionModeType.EXECUTE_METHOD_DIRECTLY)
-	public AllFeartureDomainObject viewTest(AllFeartureDomainObject allType) {
+	public AllFeatureDomainObject viewTest(AllFeatureDomainObject allType) {
 		return allType;
 	}
 
 	@ExecutionMode(mode = ExecutionModeType.EDIT_PARAMETER_THEN_EXECUTE_METHOD_OR_CANCEL)
-	public void modifyTest(AllFeartureDomainObject allType) {
+	public void modifyTest(AllFeatureDomainObject allType) {
 	}
 
 	@ExecutionMode(mode = ExecutionModeType.EXECUTE_METHOD_AFTER_CONFORMATION)
-	public void deleteTest(AllFeartureDomainObject allType) {
+	public void deleteTest(AllFeatureDomainObject allType) {
 		allTypes.remove(allType);
 	}
 
 	public int countTest() {
 		return allTypes.size();
 	}
-	
+
 	public URI aboutTheDeveloper() {
 		try {
 			return new URI("http://nl.linkedin.com/in/nilstenhoeve/");
